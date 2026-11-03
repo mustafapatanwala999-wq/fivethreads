@@ -311,7 +311,7 @@
       show.forEach((s, k) => {
         const ref = (s.type === 'polo' ? 'P' : 'T') + s.img.replace(/\D/g, ''), key = (s.type === 'polo' ? 'Polo ' : 'T-shirt ') + ref;
         const el = document.createElement('figure'); el.className = 'item' + (picks.includes(key) ? ' added' : ''); el.style.margin = 0; el.style.cursor = 'default'; el.style.animation = still ? 'none' : ''; el.style.animationDelay = (k * 30) + 'ms';
-        el.innerHTML = `<div class="ph"><span class="typ">${s.type === 'polo' ? 'Polo' : 'T-shirt'}</span><img src="img/showroom/${s.img}.webp" alt="${s.type === 'polo' ? 'Kids polo shirt' : 'Kids graphic T-shirt'} on a hanger in the Five Threads showroom" loading="lazy"></div><figcaption class="meta"><b>Ref ${ref}</b><span>Design no. on request</span></figcaption>`;
+        el.innerHTML = `<div class="ph"><span class="typ">${s.type === 'polo' ? 'Polo' : 'T-shirt'}</span><img src="img/products/${s.img}.webp" alt="${s.type === 'polo' ? 'Kids polo shirt' : 'Kids graphic T-shirt'}, product photo" loading="lazy"></div><figcaption class="meta"><b>Ref ${ref}</b><span>Design no. on request</span></figcaption>`;
         el.appendChild(selBtn(key, key));
         showGrid.appendChild(el);
       });

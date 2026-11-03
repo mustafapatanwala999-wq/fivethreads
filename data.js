@@ -1,10 +1,11 @@
 /* Five Threads catalogue data.
    Sweatshirt design numbers and size ranges are read from the brand's own catalogue cards
-   (images/cards, originals in ~/Five threads/images). T-shirts and polos are showroom photos;
+   (images/cards, originals in ~/Five threads/images). T-shirts and polos are product shots made from showroom photos (work/make_products.py);
    their design numbers are not on file yet, so they are listed as "on request". */
 window.FT = {
   // Fill in once Mustafa confirms the number (open question 1). Digits only, with country code.
-  whatsapp: "",
+  whatsapp: "",   // digits only, with country code, e.g. 9715xxxxxxxx
+  phone: "",      // as it should be shown, e.g. +971 5x xxx xxxx
   shop: { lat: 25.2716, lng: 55.3005, address: "Shop No. 3, Murshid Bazaar, Deira, Dubai, UAE" },
   designs: [
     { no: "3269A", from: 1, to: 10, tag: "t01", card: "card01", look: "Cute Moments" },

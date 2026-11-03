@@ -12,7 +12,7 @@
 
   /* ---------- Smooth scroll (off for reduced motion and automated recording) ---------- */
   if (G && window.Lenis && !reduce && !navigator.webdriver) {
-    const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    const lenis = window.__lenis = new Lenis({ duration: 1.15, smoothWheel: true });
     lenis.on('scroll', ST.update);
     G.ticker.add(t => lenis.raf(t * 1000));
     G.ticker.lagSmoothing(0);
@@ -130,4 +130,46 @@
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) { vids.forEach(v => { v.removeAttribute('autoplay'); v.pause(); }); return; }
   const io = new IntersectionObserver(es => es.forEach(en => en.isIntersecting ? en.target.play().catch(() => {}) : en.target.pause()), { threshold: .25 });
   vids.forEach(v => io.observe(v));
+})();
+
+/* Glimpse cards, contact details, the 5-second hover pause on the photo strips, and the surprise Burj */
+(function () {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Factory and shop cards: cross-fade through their photos
+  if (!reduce) document.querySelectorAll('.gfade').forEach((g, n) => {
+    const imgs = [...g.querySelectorAll('img')]; let i = 0;
+    setTimeout(() => setInterval(() => { imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }, 3600), n * 1800);
+  });
+  // Contact: show the phone and WhatsApp only once they are set in data.js
+  const FT = window.FT || {};
+  if (FT.phone && document.getElementById('cphone')) {
+    const a = document.getElementById('cphonea');
+    a.textContent = FT.phone; a.href = 'tel:' + FT.phone.replace(/[^+\d]/g, '');
+    document.getElementById('cphone').hidden = false;
+  }
+  if (FT.whatsapp && document.getElementById('cwa')) { const w = document.getElementById('cwa'); w.href = 'https://wa.me/' + FT.whatsapp; w.target = '_blank'; w.rel = 'noopener'; w.hidden = false; }
+  // Photo strips keep sliding; they pause only after the pointer rests on them for 5 seconds
+  const look = document.querySelector('.look'), strips = [...document.querySelectorAll('.look .strip')];
+  if (look && strips.length) {
+    let t;
+    strips.forEach(s => {
+      s.addEventListener('pointerenter', () => { clearTimeout(t); t = setTimeout(() => strips.forEach(x => x.classList.add('paused')), 5000); });
+      s.addEventListener('pointerleave', () => { clearTimeout(t); strips.forEach(x => x.classList.remove('paused')); });
+    });
+  }
+  // Surprise Burj: bounces up near the bottom of the page, launches back to the top
+  const b = document.getElementById('burjtop');
+  if (!b) return;
+  const check = () => {
+    const near = scrollY + innerHeight > document.documentElement.scrollHeight - innerHeight * 1.6;
+    if (near && !b.classList.contains('up')) { b.classList.add('up'); b.tabIndex = 0; }
+    else if (!near && b.classList.contains('up') && !b.classList.contains('go')) { b.classList.remove('up'); b.tabIndex = -1; }
+  };
+  addEventListener('scroll', check, { passive: true }); check();
+  b.addEventListener('click', () => {
+    if (reduce) { scrollTo(0, 0); return; }
+    b.classList.add('go');
+    setTimeout(() => window.__lenis ? window.__lenis.scrollTo(0, { duration: 1.8 }) : scrollTo({ top: 0, behavior: 'smooth' }), 220);
+    setTimeout(() => { b.classList.remove('go', 'up'); b.tabIndex = -1; }, 1400);
+  });
 })();
