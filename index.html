@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Five Threads Trading LLC · Kids' and men's wear wholesale, Deira, Dubai</title>
+<meta name="description" content="Five Threads Trading LLC, Murshid Bazaar, Deira: wholesalers of kids' and men's sweatshirts, T-shirts and polos, made in our own factory. Supplying stores across the UAE and Bahrain.">
+<meta name="theme-color" content="#1f4a46">
+<style>
+/* Five Threads Trading LLC · site styles
+   Brand: teal + cream from the company card; pastel threads from the kids' catalogue cards. */
+@font-face{font-family:Mont;src:url(fonts/montserrat-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Mont;src:url(fonts/montserrat-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Mont;src:url(fonts/montserrat-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Mont;src:url(fonts/montserrat-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Mont;src:url(fonts/montserrat-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:Baloo;src:url(fonts/baloo-2-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Baloo;src:url(fonts/baloo-2-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Baloo;src:url(fonts/baloo-2-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:Tajawal;src:url(fonts/tajawal-arabic-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Tajawal;src:url(fonts/tajawal-arabic-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --teal:#1f4a46;--teal-2:#2a5f5a;--teal-3:#173835;--deep:#0f2624;
+  --cream:#f4eee2;--paper:#fbf8f2;--ink:#132320;--mute:#5a6b68;
+  --pink:#f6a6c1;--mint:#9fe0c9;--lilac:#c7b5f0;--sun:#ffd25a;--coral:#ff8a6b;
+  --wood:#9a5b2e;--line:rgba(19,35,32,.12);
+  --r:22px;--pad:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 17px/1.6 Mont,system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Mont,sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.02;margin:0}
+p{margin:0}
+.ar{font-family:Tajawal,sans-serif;direction:rtl}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font:700 12px/1.2 Mont;letter-spacing:.22em;text-transform:uppercase}
+.kid{font-family:Baloo,Mont,sans-serif;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:700 15px/1 Mont;text-decoration:none;border:0;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--sun);color:var(--deep);box-shadow:0 10px 30px -10px rgba(255,210,90,.7)}
+.btn-ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(244,238,226,.55)}
+.btn-teal{background:var(--teal);color:var(--cream)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--deep);padding:10px 14px;border-radius:8px;z-index:99}
+.skip:focus{left:8px}
+
+/* ---------- Header ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:16px}
+.top .wrap{transition:padding .4s var(--ease),background .4s,box-shadow .4s,border-radius .4s,max-width .5s var(--ease)}
+.top.solid{padding-top:10px}
+.top.solid .wrap{max-width:1180px;border-radius:999px;padding:10px 12px 10px 26px;background:linear-gradient(135deg,rgba(31,74,70,.72),rgba(15,38,36,.62));-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 0 0 1px rgba(255,255,255,.12),0 18px 40px -18px rgba(0,0,0,.55)}
+.top.solid .lockup img{width:132px}
+@media (max-width:760px){.top.solid{padding:8px 10px 0}.top.solid .wrap{padding:8px 8px 8px 18px}}
+.lockup{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--cream);line-height:1}
+.lockup img{display:block;width:clamp(138px,13vw,172px);height:auto}
+footer .lockup img{width:240px}
+.lockup .ar{font:700 11px/1.3 Tajawal;opacity:.85;margin-bottom:3px}
+.lockup b{font:800 21px/1 Mont;letter-spacing:.01em}
+.lockup small{display:flex;align-items:center;gap:7px;font:500 9.5px/1 Mont;letter-spacing:.3em;margin-top:5px;opacity:.9}
+.lockup small:before,.lockup small:after{content:"";width:16px;height:1px;background:currentColor;opacity:.7}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{color:var(--cream);text-decoration:none;font:600 14px/1 Mont;opacity:.85;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.nav .btn{padding:11px 18px;font-size:14px;opacity:1}
+@media (max-width:900px){.nav a:not(.btn){display:none}}
+
+/* ---------- Hero: copy + Made / Sold / Worn triptych ---------- */
+.hero{position:relative;min-height:100svh;background:radial-gradient(110% 80% at 80% 20%,#2f6f67 0%,var(--teal) 42%,var(--deep) 100%);color:var(--cream);overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:118px 0 34px}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0 2px,transparent 2px 9px),repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px);pointer-events:none}
+.hero>.wrap{width:100%}
+.hgrid{position:relative;display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,4.5vw,72px);align-items:center;width:100%}
+.hero .eyebrow{color:var(--mint);display:flex;flex-wrap:wrap;gap:10px 16px;margin-bottom:24px}
+.hero .eyebrow span+span{color:var(--sun)}
+.hero h1{font-size:clamp(48px,6.4vw,104px);text-transform:uppercase;letter-spacing:-.035em}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(.5em) rotate(4deg);animation:rise .9s var(--ease) forwards}
+.hero h1 .kid{display:block;text-transform:none;color:var(--sun);font-size:1.06em;line-height:.92;margin-top:.06em;letter-spacing:-.01em}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero .lede{max-width:520px;font-size:clamp(16px,1.3vw,19px);line-height:1.65;color:rgba(244,238,226,.86);margin:26px 0 32px;opacity:0;animation:fade 1s .9s var(--ease) forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;opacity:0;animation:fade 1s 1.1s var(--ease) forwards}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.trip{position:relative;display:flex;gap:12px;height:min(66vh,680px);opacity:0;animation:fade 1.2s .4s var(--ease) forwards}
+.pane{position:relative;flex:1;min-width:0;border:0;padding:0;border-radius:26px;overflow:hidden;cursor:pointer;background:var(--teal-3);color:#fff;font:inherit;text-align:left;transition:flex 1.1s var(--ease),transform .5s var(--ease);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.pane.on{flex:3.4}
+.pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 6s linear,filter 1s}
+.pane.on img{transform:scale(1)}
+.pane:not(.on) img{filter:saturate(.6) brightness(.7)}
+.pane:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(6,20,19,.82))}
+.pl{position:absolute;left:18px;right:18px;bottom:20px;z-index:2;display:flex;flex-direction:column;gap:2px}
+.pl b{font:800 12px/1 Mont;letter-spacing:.2em;color:var(--sun)}
+.pl em{font:800 clamp(28px,3vw,46px)/1 Baloo;font-style:normal}
+.pl small{font:600 13px/1.3 Mont;color:rgba(255,255,255,.85);white-space:nowrap;opacity:0;transform:translateY(8px);transition:opacity .6s .3s,transform .6s .3s var(--ease)}
+.pane.on .pl small{opacity:1;transform:none}
+.pane:not(.on) .pl{left:50%;bottom:22px;transform:translateX(-50%);align-items:center}
+.pane:not(.on) .pl em{writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(22px,2vw,30px)}
+.pane .bar{position:absolute;left:18px;right:18px;top:18px;height:3px;border-radius:3px;background:rgba(255,255,255,.25);z-index:2;overflow:hidden}
+.pane .bar:after{content:"";position:absolute;inset:0;background:var(--sun);transform:scaleX(0);transform-origin:left}
+.pane.on .bar:after{animation:fill var(--dwell,5.2s) linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+.swing{position:absolute;right:-18px;top:-48px;z-index:5;transform-origin:50% 0;animation:sway 4.5s ease-in-out infinite}
+.swing .string{width:2px;height:64px;margin:0 auto;background:linear-gradient(var(--cream),#d8cbb2)}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(6deg)}}
+.tag{position:relative;width:140px;padding:26px 14px 14px;border-radius:14px 14px 18px 18px;background:var(--cream);color:var(--ink);text-align:center;box-shadow:0 18px 30px -12px rgba(0,0,0,.45)}
+.tag:before{content:"";position:absolute;top:9px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--teal);box-shadow:inset 0 2px 3px rgba(0,0,0,.4)}
+.tag small{display:block;font:700 10px/1 Mont;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.tag b{display:block;font:800 32px/1 Baloo;color:var(--teal);margin:6px 0 4px;transition:opacity .4s}
+.tag em{display:block;font:700 12.5px/1.2 Mont;font-style:normal;color:var(--ink)}
+.hero .facts{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;opacity:0;animation:fade 1s 1.3s var(--ease) forwards}
+.hero .facts div{font:600 13px/1.35 Mont;color:rgba(244,238,226,.7);padding:14px 18px;border-left:1px solid rgba(244,238,226,.16)}
+.hero .facts div:first-child{border-left:0;padding-left:0}
+.hero .facts b{display:block;font:800 28px/1 Baloo;color:var(--cream);margin-bottom:4px}
+@media (max-width:900px){
+  .hero{padding-top:104px}
+  .hgrid{grid-template-columns:1fr;gap:40px}
+  .trip{height:440px;gap:8px}
+  .pane.on{flex:4}
+  .swing{right:-6px;top:-40px}
+  .tag{width:112px;padding:22px 8px 10px}.tag b{font-size:25px}
+  .hero .facts{grid-template-columns:1fr 1fr;gap:4px 0}
+  .hero .facts div:nth-child(3){border-left:0;padding-left:0}
+}
+
+/* ---------- Liquid glass ---------- */
+.glass{position:relative;isolation:isolate;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05) 55%,rgba(255,255,255,.12));-webkit-backdrop-filter:blur(18px) saturate(170%);backdrop-filter:blur(18px) saturate(170%);border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),inset 0 -14px 28px -18px rgba(159,224,201,.35),0 22px 44px -24px rgba(0,0,0,.55)}
+.glass:before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;background:radial-gradient(120px 60px at var(--mx,30%) var(--my,0%),rgba(255,255,255,.38),transparent 70%);opacity:.8;transition:opacity .3s}
+.glink{display:inline-flex;align-items:center;gap:14px;margin-top:26px;padding:16px 18px 16px 24px;border-radius:999px;color:var(--cream);text-decoration:none;font:700 15px/1 Mont;transition:transform .4s var(--ease)}
+.glink i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sun);color:var(--deep);font-style:normal;font-weight:800;transition:transform .4s var(--ease)}
+.glink:hover{transform:translateY(-2px)}.glink:hover i{transform:rotate(45deg)}
+
+/* ---------- Five threads (page-long, scroll-drawn) ---------- */
+.threads{position:absolute;left:0;top:0;width:100%;pointer-events:none;z-index:1;overflow:visible}
+.threads path{fill:none;stroke-width:3;stroke-linecap:round}
+main{position:relative}
+section{position:relative;z-index:2}
+
+/* ---------- Section heads ---------- */
+.head{display:grid;grid-template-columns:1fr 1fr;gap:30px 60px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.head h2{font-size:clamp(36px,5.2vw,74px);text-transform:uppercase}
+.head h2 .kid{text-transform:none;color:var(--teal-2)}
+.head p{color:var(--mute);font-size:18px;max-width:520px}
+.head .eyebrow{grid-column:1/-1;color:var(--teal-2);margin-bottom:-12px}
+@media (max-width:800px){.head{grid-template-columns:1fr}}
+.reveal{animation:fade linear both;animation-timeline:view();animation-range:entry 5% cover 28%}
+@supports not (animation-timeline:view()){.reveal{animation:none}}
+
+/* ---------- The Rail (signature) ---------- */
+.railsec{height:400vh;background:linear-gradient(180deg,var(--paper),#efe7d8 40%,var(--paper))}
+.railpin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:76px}
+.railhead{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:0 var(--pad);margin-bottom:10px}
+.railhead h2{font-size:clamp(32px,4.6vw,64px);text-transform:uppercase}
+.railhead h2 .kid{color:var(--teal-2);text-transform:none}
+.railhead p{max-width:380px;color:var(--mute);font-size:16px}
+.railcount{font:800 15px/1 Baloo;color:var(--teal);white-space:nowrap}
+.railcount b{font-size:44px;display:block}
+.rail{position:relative;height:clamp(420px,62vh,600px)}
+.bar{position:absolute;left:0;right:0;top:44px;height:12px;border-radius:8px;background:linear-gradient(180deg,#e6e2da,#a9a395 55%,#d7d2c6);box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.track{position:absolute;top:20px;left:0;display:flex;gap:clamp(18px,2.4vw,36px);padding:0 30vw 0 var(--pad);will-change:transform}
+.hanger{position:relative;flex:0 0 auto;width:clamp(190px,19vw,260px);transform-origin:50% 22px;cursor:pointer;border:0;background:none;padding:0;text-align:left;color:inherit;font:inherit}
+.hook{width:22px;height:58px;margin:0 auto -14px;position:relative;z-index:2;border-radius:6px;background:linear-gradient(90deg,#b77a45,#d9a46c 45%,#a8693a);box-shadow:0 4px 8px -3px rgba(0,0,0,.4)}
+.hook:before{content:"";position:absolute;left:10px;top:4px;bottom:4px;width:2px;background:rgba(80,40,10,.45)}
+.hook:after{content:"";position:absolute;left:4px;right:4px;top:22px;height:7px;border-radius:4px;background:#8c8c8c;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.garment{position:relative;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 24px 40px -22px rgba(19,35,32,.55),0 0 0 1px rgba(0,0,0,.04);transition:transform .45s var(--ease),box-shadow .45s}
+.garment img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 20%}
+.hanger:hover .garment,.hanger:focus-visible .garment{transform:translateY(-6px);box-shadow:0 34px 50px -24px rgba(19,35,32,.6)}
+.stag{position:absolute;right:-10px;bottom:-26px;width:104px;padding:16px 8px 9px;border-radius:10px 10px 14px 14px;background:var(--teal);color:var(--cream);text-align:center;transform:rotate(6deg);transform-origin:50% 0;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:transform .5s var(--ease)}
+.stag:before{content:"";position:absolute;top:6px;left:50%;margin-left:-4px;width:8px;height:8px;border-radius:50%;background:var(--paper)}
+.stag b{display:block;font:800 22px/1 Baloo}
+.stag em{display:block;font:700 10.5px/1.2 Mont;font-style:normal;color:var(--mint);margin-top:2px}
+.hanger:hover .stag{transform:rotate(-4deg) scale(1.06)}
+.hanger:nth-child(4n+2) .stag{background:var(--wood)}
+.hanger:nth-child(4n+3) .stag{background:#6a4fb3}
+.hanger:nth-child(4n+4) .stag{background:#c64f7d}
+.raillabel{position:absolute;left:var(--pad);bottom:24px;font:600 13px/1.3 Mont;color:var(--mute);display:flex;gap:14px;align-items:center}
+.raillabel .prog{width:160px;height:3px;border-radius:3px;background:rgba(0,0,0,.1);overflow:hidden}
+.raillabel .prog i{display:block;height:100%;width:0;background:var(--teal)}
+@media (max-width:700px){.railhead{flex-direction:column;align-items:start}.railhead p{display:none}.railsec{height:520vh}}
+
+/* ---------- Tag dialog ---------- */
+dialog.sheet{border:0;padding:0;border-radius:26px;max-width:min(940px,94vw);width:100%;background:var(--paper);color:var(--ink);box-shadow:0 40px 120px -20px rgba(0,0,0,.5)}
+dialog.sheet::backdrop{background:rgba(15,38,36,.7);backdrop-filter:blur(6px)}
+.sheetgrid{display:grid;grid-template-columns:1.25fr 1fr}
+.sheetgrid img{width:100%;height:100%;object-fit:cover;background:#fff}
+.sheetbody{padding:34px;display:flex;flex-direction:column;gap:16px}
+.sheetbody .no{font:800 64px/1 Baloo;color:var(--teal)}
+.sheetbody .size{font:700 18px/1.3 Mont}
+.sheetbody ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.sheetbody li{font:700 12px/1 Mont;padding:9px 12px;border-radius:999px;background:#eae3d4}
+.close{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font:700 22px/1 Mont;cursor:pointer;color:var(--ink)}
+@media (max-width:760px){.sheetgrid{grid-template-columns:1fr}.sheetgrid img{max-height:46vh}.sheetbody{padding:24px}.sheetbody .no{font-size:48px}}
+
+/* ---------- Range: expanding panels ---------- */
+.range{padding:clamp(80px,10vw,140px) 0}
+.panels{display:flex;gap:14px;height:clamp(520px,72vh,720px)}
+.panel{position:relative;flex:1;border-radius:var(--r);overflow:hidden;color:#fff;text-decoration:none;transition:flex .8s var(--ease);min-width:0}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.panel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(10,25,23,.78))}
+.panel:hover,.panel:focus-visible{flex:2.1}
+.panel:hover img{transform:scale(1.05)}
+.panel .pc{position:absolute;left:24px;right:24px;bottom:24px;z-index:2}
+.panel .num{font:800 13px/1 Mont;letter-spacing:.2em;color:var(--sun)}
+.panel h3{font-size:clamp(26px,2.6vw,40px);text-transform:uppercase;margin:10px 0 8px}
+.panel p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.88);max-width:340px}
+.panel .go{display:inline-block;margin-top:14px;font:700 13px/1 Mont;border-bottom:2px solid var(--sun);padding-bottom:4px}
+@media (max-width:800px){.panels{flex-direction:column;height:auto}.panel{height:380px;flex:none}.panel:hover{flex:none}}
+
+/* ---------- Lookbook marquee ---------- */
+.look{padding:clamp(70px,8vw,120px) 0;background:var(--teal);color:var(--cream);overflow:hidden}
+.look .head h2 .kid{color:var(--sun)}
+.look .head p{color:rgba(244,238,226,.75)}
+.look .head .eyebrow{color:var(--mint)}
+.strip{display:flex;gap:16px;width:max-content;animation:slide 70s linear infinite}
+.strip.rev{animation-direction:reverse;animation-duration:85s;margin-top:16px}
+.strip img{height:clamp(260px,34vw,420px);width:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+.look:hover .strip{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.look .credit{margin-top:28px;font-size:13px;color:rgba(244,238,226,.6)}
+
+/* ---------- Why stores stock us ---------- */
+.why{padding:clamp(90px,11vw,160px) 0}
+.whygrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px)}
+.words{display:flex;flex-direction:column}
+.word{padding:clamp(26px,4vh,44px) 0;border-top:1px solid var(--line);opacity:.28;transition:opacity .5s}
+.word.on{opacity:1}
+.word h3{font-size:clamp(40px,5.6vw,84px);text-transform:uppercase}
+.word h3 .kid{text-transform:none}
+.word p{color:var(--mute);margin-top:12px;max-width:440px}
+.photostack{position:sticky;top:12vh;height:76vh;border-radius:28px;overflow:hidden;background:#ddd}
+.photostack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .8s,transform 1.2s var(--ease)}
+.photostack img.on{opacity:1;transform:none}
+.badge{position:absolute;left:20px;bottom:20px;z-index:2;background:var(--cream);color:var(--teal);padding:12px 16px;border-radius:14px;font:800 15px/1.2 Baloo;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(60px,8vw,110px);border-top:2px solid var(--ink)}
+.proof div{padding:28px 24px 0 0}
+.proof b{display:block;font:800 clamp(30px,3.4vw,48px)/1 Baloo;color:var(--teal)}
+.proof span{display:block;margin-top:8px;color:var(--mute);font-size:15px}
+@media (max-width:800px){.whygrid{grid-template-columns:1fr}.photostack{position:relative;top:0;height:420px;order:-1}.proof{grid-template-columns:1fr}.word{opacity:1}}
+
+/* ---------- Where we supply ---------- */
+.where{padding:clamp(90px,10vw,150px) 0;background:var(--deep);color:var(--cream);overflow:hidden}
+.where .head h2 .kid{color:var(--mint)}
+.where .head p{color:rgba(244,238,226,.72)}
+.where .head .eyebrow{color:var(--sun)}
+.mapgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.map{position:relative;border-radius:28px;background:radial-gradient(circle at 40% 40%,rgba(159,224,201,.08),transparent 60%),repeating-radial-gradient(circle at 34% 46%,rgba(255,255,255,.035) 0 1px,transparent 1px 34px);border:1px solid rgba(255,255,255,.08)}
+.map svg{width:100%;height:auto;display:block}
+.map .route{fill:none;stroke-width:2;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2.2s var(--ease)}
+.map.on .route{stroke-dashoffset:0}
+.map .pin{fill:var(--cream)}
+.map .home{fill:var(--sun)}
+.map text{fill:var(--cream);font:700 13px Mont}
+.map .pulse{fill:none;stroke:var(--sun);stroke-width:2;transform-origin:center;transform-box:fill-box;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.4);opacity:1}to{transform:scale(2.6);opacity:0}}
+.places{list-style:none;margin:0;padding:0;columns:2;column-gap:30px}
+.places li{break-inside:avoid;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font:700 17px/1.2 Mont;display:flex;justify-content:space-between;gap:12px}
+.places li span{color:var(--mint);font:600 12px/1.6 Mont;letter-spacing:.1em;text-transform:uppercase}
+.who{margin-top:34px;font:800 clamp(22px,2.4vw,32px)/1.25 Mont}
+.who em{font-style:normal;color:var(--sun)}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}.places{columns:1}}
+
+/* ---------- How to order ---------- */
+.how{padding:clamp(90px,10vw,150px) 0}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps:before{content:"";position:absolute;left:0;right:0;top:34px;border-top:3px dashed rgba(31,74,70,.35)}
+.step{position:relative;padding-top:86px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:var(--cream);font:800 30px/1 Baloo;box-shadow:0 0 0 8px var(--paper)}
+.step:nth-child(2):before{background:var(--wood)}.step:nth-child(3):before{background:#6a4fb3}.step:nth-child(4):before{background:#c64f7d}
+.step h3{font-size:22px;margin-bottom:10px}
+.step p{color:var(--mute);font-size:16px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.steps:before{display:none}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- Book a visit ---------- */
+.book{padding:clamp(90px,10vw,150px) 0;background:linear-gradient(180deg,#efe7d8,var(--paper))}
+.bookgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:start}
+.planner{background:#fff;border-radius:28px;padding:clamp(22px,3vw,40px);box-shadow:0 30px 70px -40px rgba(19,35,32,.45)}
+.planner fieldset{border:0;margin:0 0 26px;padding:0;min-width:0}
+.planner legend{font:800 13px/1 Mont;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-2);margin-bottom:14px;padding:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt span{display:block;padding:16px;border-radius:16px;background:#f3eee4;font:700 15px/1.3 Mont;transition:background .25s,color .25s,box-shadow .25s;height:100%}
+.opt span small{display:block;font:500 13px/1.4 Mont;color:var(--mute);margin-top:4px}
+.opt input:checked+span{background:var(--teal);color:var(--cream);box-shadow:0 10px 24px -12px rgba(31,74,70,.8)}
+.opt input:checked+span small{color:var(--mint)}
+.opt input:focus-visible+span{outline:3px solid var(--sun);outline-offset:2px}
+.days{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
+.days .opt span{width:70px;text-align:center;padding:12px 6px}
+.days .opt b{display:block;font:800 26px/1 Baloo;margin:4px 0 2px}
+.days .opt span small{margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fields label{display:flex;flex-direction:column;gap:7px;font:700 13px/1 Mont;color:var(--ink)}
+.fields input,.fields select{font:500 16px/1.2 Mont;padding:14px;border-radius:12px;border:1.5px solid #ddd3c2;background:#fbf8f2;color:var(--ink);width:100%}
+.fields .full{grid-column:1/-1}
+.picks{display:flex;flex-wrap:wrap;gap:8px;min-height:20px}
+.pick{display:inline-flex;align-items:center;gap:8px;padding:8px 10px 8px 14px;border-radius:999px;background:#e8f4ef;color:var(--teal);font:800 14px/1 Baloo}
+.pick button{border:0;background:var(--teal);color:#fff;width:22px;height:22px;border-radius:50%;cursor:pointer;font:700 13px/1 Mont}
+.hint{color:var(--mute);font-size:14px}
+.submit{width:100%;justify-content:center;margin-top:6px;padding:18px;font-size:16px}
+.ticket{display:none;background:var(--teal);color:var(--cream);border-radius:28px;padding:34px;position:relative;overflow:hidden}
+.ticket.show{display:block;animation:fade .7s var(--ease)}
+.ticket .code{font:800 clamp(36px,4vw,52px)/1 Baloo;color:var(--sun);margin:8px 0 18px}
+.ticket dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0 0 24px;font-size:15px}
+.ticket dt{color:var(--mint);font-weight:700}
+.ticket dd{margin:0}
+.ticket .acts{display:flex;flex-wrap:wrap;gap:10px}
+.side{display:flex;flex-direction:column;gap:18px}
+.side .card{border-radius:24px;overflow:hidden;position:relative;background:var(--teal);color:var(--cream)}
+.side .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.side .card div{padding:22px}
+.side h3{font-size:22px;margin-bottom:8px}
+.side p{font-size:15px;color:rgba(244,238,226,.82)}
+.note{font-size:14px;color:var(--mute);background:#fff;border-radius:18px;padding:18px 20px}
+@media (max-width:900px){.bookgrid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.times{grid-template-columns:1fr 1fr 1fr}}
+
+/* ---------- Visit ---------- */
+.visit{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.visit>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.0) translateX(-2%)}}
+.visit:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(15,38,36,.92) 0%,rgba(15,38,36,.72) 42%,rgba(15,38,36,.1) 100%)}
+.visit .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:80px}
+.visit h2{font-size:clamp(40px,6vw,90px);text-transform:uppercase;max-width:760px}
+.visit h2 .kid{color:var(--sun);text-transform:none}
+.addr{margin:24px 0 30px;font-size:19px;line-height:1.6;max-width:520px;color:rgba(255,255,255,.9)}
+.addr .ar{display:block;font-size:20px;margin-top:6px;text-align:left}
+
+/* ---------- Footer ---------- */
+footer{background:var(--deep);color:rgba(244,238,226,.75);padding:60px 0 40px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+footer .lockup{align-items:flex-start}
+footer h4{font:800 12px/1 Mont;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);margin:0 0 14px}
+footer a{color:var(--cream)}
+footer .legal{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr}}
+
+/* ---------- Catalogue page ---------- */
+.chero{background:var(--teal);color:var(--cream);padding:150px 0 70px;position:relative;overflow:hidden}
+.chero h1{font-size:clamp(46px,7vw,100px);text-transform:uppercase}
+.chero h1 .kid{color:var(--sun);text-transform:none}
+.chero p{max-width:620px;margin-top:20px;color:rgba(244,238,226,.82);font-size:18px}
+.chero .sign{position:absolute;right:var(--pad);top:120px;width:clamp(150px,20vw,280px);transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+@media (max-width:760px){.chero .sign{position:relative;right:auto;top:auto;margin:0 0 20px;width:170px}}
+.filters{position:sticky;top:72px;z-index:20;background:rgba(251,248,242,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.filters .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 30px;padding-top:16px;padding-bottom:16px}
+.typebtns{display:flex;gap:8px;flex-wrap:wrap}
+.typebtns button{border:0;cursor:pointer;padding:11px 16px;border-radius:999px;background:#ece5d8;color:var(--ink);font:700 14px/1 Mont}
+.typebtns button[aria-pressed=true]{background:var(--teal);color:var(--cream)}
+.age{display:flex;align-items:center;gap:14px;font:700 14px/1 Mont}
+.age input{width:200px;accent-color:var(--teal)}
+.age output{font:800 26px/1 Baloo;color:var(--teal);min-width:72px}
+.age button{border:0;background:none;color:var(--teal-2);font:700 13px Mont;text-decoration:underline;cursor:pointer}
+.count{font:600 14px/1 Mont;color:var(--mute)}
+.wall{padding:50px 0 100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:40px 26px}
+.item{position:relative;border:0;background:none;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;animation:fade .6s var(--ease) both}
+.item .ph{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 22px 40px -28px rgba(19,35,32,.6);transition:transform .45s var(--ease)}
+.item .ph img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 20%}
+.item:hover .ph{transform:translateY(-6px) rotate(-.6deg)}
+.item .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:14px}
+.item .meta b{font:800 26px/1 Baloo;color:var(--teal)}
+.item .meta span{font:700 13px/1.2 Mont;color:var(--mute);text-align:right}
+.item .lk{background:none;padding:0;color:var(--ink);font:600 14px/1.3 Mont;display:block;margin-top:2px;overflow:visible}
+.item .typ{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);color:var(--teal);font:800 11px/1 Mont;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.item.added .ph{box-shadow:0 0 0 3px var(--sun),0 22px 40px -28px rgba(19,35,32,.6)}
+.sub{margin:70px 0 22px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.sub h2{font-size:clamp(30px,3.6vw,48px);text-transform:uppercase}
+.sub p{color:var(--mute);max-width:520px}
+.empty{padding:40px;border-radius:20px;background:#fff;color:var(--mute);text-align:center;grid-column:1/-1}
+.visitbar{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);z-index:40;display:flex;align-items:center;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;background:var(--deep);color:var(--cream);box-shadow:0 20px 50px -10px rgba(0,0,0,.5);transition:transform .5s var(--ease);font:700 14px/1.2 Mont;max-width:94vw}
+.visitbar.show{transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero h1 .w,.hero .lede,.hero .ctas,.hero .facts,.trip{opacity:1;transform:none}
+  .strip{animation:none}
+}
+
+/* Layout guards */
+.bookgrid>*,.mapgrid>*,.whygrid>*,.hgrid>*{min-width:0}
+.railhead h2{font-size:clamp(30px,4vw,56px)}
+@media (max-width:560px){.seg{grid-template-columns:1fr}.times{grid-template-columns:1fr 1fr 1fr}.times .opt span{padding:14px 8px;text-align:center}.planner{padding:20px 16px}}
+.nav .btn-sun{color:var(--deep)}
+.hanger:nth-child(4n+2) .stag em,.hanger:nth-child(4n+3) .stag em,.hanger:nth-child(4n+4) .stag em{color:#fff}
+.hanger:nth-child(4n+4) .stag{background:#ad3c69}
+.look .credit{color:rgba(244,238,226,.82)}
+
+/* ---------- Journey: Burj Khalifa to Murshid Bazaar (scroll-driven) ---------- */
+.journey{height:360vh;background:#06121a;color:var(--cream)}
+.jpin{position:sticky;top:0;height:100svh;overflow:hidden}
+.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+#world{transform-box:view-box;will-change:transform}
+.jcopy{position:absolute;left:var(--pad);top:clamp(100px,16vh,170px);z-index:2;max-width:560px}
+.jstep{position:absolute;top:0;left:0;width:min(560px,86vw);opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.jstep.on{opacity:1;transform:none}
+.jstep .eyebrow{color:var(--sun);margin-bottom:14px}
+.jstep h2{font-size:clamp(40px,6vw,88px);text-transform:uppercase;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.jstep h2 .kid{display:block;text-transform:none;color:var(--sun)}
+.jstep p{margin-top:16px;font-size:18px;color:rgba(244,238,226,.85);max-width:440px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.jcard{position:absolute;z-index:3;right:var(--pad);top:50%;width:min(560px,92vw);display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;padding:16px;border-radius:26px;background:rgba(15,38,36,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 40px 80px -30px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.08);transform:translateY(-50%)}
+.js .jcard{opacity:0;transform:translateY(-40%) scale(.96);transition:opacity .8s var(--ease),transform .8s var(--ease);pointer-events:none}
+.js .jcard.show{opacity:1;transform:translateY(-50%);pointer-events:auto}
+.jcard img{width:200px;aspect-ratio:9/16;object-fit:cover;border-radius:18px}
+.jcard h3{font-size:24px;margin:8px 0 8px}
+.jcard p{font-size:16px;color:rgba(244,238,226,.85)}
+.jcard .ar{font-size:17px;margin-top:6px}
+.jacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.jacts .btn{padding:12px 18px;font-size:14px}
+.jprog{position:absolute;left:var(--pad);right:var(--pad);bottom:26px;height:3px;border-radius:3px;background:rgba(255,255,255,.12);z-index:2}
+.jprog i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#ce1126,#00732f 40%,#fff 70%,#ffd25a)}
+@media (max-width:760px){
+  .journey{height:320vh}
+  .jcard{left:16px;right:16px;top:auto;bottom:56px;width:auto;grid-template-columns:110px 1fr;gap:14px;transform:none}
+  .js .jcard{transform:translateY(30px)}.js .jcard.show{transform:none}
+  .jcard img{width:110px}
+  .jcard h3{font-size:19px}.jcard p{font-size:14px}
+  .jacts .btn{padding:10px 14px;font-size:13px}
+}
+
+@media(max-width:760px){.jcopy{left:0;right:0;top:70px;height:300px;max-width:none;background:linear-gradient(180deg,rgba(7,20,24,.94) 0%,rgba(7,20,24,.85) 72%,rgba(7,20,24,0) 100%)}.jstep{top:44px;left:var(--pad);width:auto;right:var(--pad)}}
+@media(max-width:760px){.jcopy{transition:opacity .6s var(--ease)}.journey:has(.jcard.show) .jcopy{opacity:0}}
+@media(max-width:560px){.age{width:100%;gap:10px}.age input{flex:1;min-width:0;width:auto}.age output{font-size:20px;min-width:0}}
+
+/* Select on catalogue cards */
+.item .open{display:block;width:100%;border:0;background:none;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit}
+.item:hover .open .ph{transform:translateY(-6px) rotate(-.6deg)}
+.item .sel{position:absolute;top:12px;right:12px;z-index:2;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;background:var(--deep);color:var(--cream);font:800 12px/1 Mont;box-shadow:0 8px 18px -8px rgba(0,0,0,.5);transition:transform .2s var(--ease),background .2s}
+.item .sel span{font-size:15px;line-height:1}
+.item .sel:hover{transform:scale(1.06)}
+.item .sel.on{background:var(--sun);color:var(--deep)}
+.item .sel:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+figure.item .meta b{font-size:20px}
+
+
+/* ---------- Marquee of words and factory photos ---------- */
+.chips{position:relative;z-index:3;background:var(--sun);color:var(--deep);overflow:hidden;padding:26px 0;border-block:2px solid var(--deep)}
+.chiprow{display:flex;align-items:center;width:max-content;will-change:transform}
+.chiprow span{font:800 clamp(34px,5vw,74px)/1 Mont;text-transform:uppercase;letter-spacing:-.03em;padding:0 22px;white-space:nowrap}
+.chiprow span.k{font-family:Baloo;text-transform:none;letter-spacing:0;color:var(--teal)}
+.chiprow img{height:clamp(46px,5.4vw,80px);width:clamp(78px,9vw,136px);object-fit:cover;border-radius:999px;box-shadow:0 0 0 3px var(--deep)}
+
+/* ---------- Our factory ---------- */
+.factory{background:var(--deep);color:var(--cream)}
+.fpin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:flex-end}
+.fimg{position:absolute;inset:0;clip-path:inset(14% 12% 14% 12% round 40px);will-change:clip-path}
+.fimg img{width:100%;height:100%;object-fit:cover;object-position:50% 92%;transform:scale(1.25);will-change:transform}
+.fshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,38,36,.25) 0%,rgba(15,38,36,.05) 30%,rgba(15,38,36,.6) 62%,rgba(15,38,36,.94));pointer-events:none}
+.fcopy{position:relative;z-index:2;width:100%;padding-bottom:clamp(60px,10vh,120px)}
+.fcopy .eyebrow{color:var(--sun);margin-bottom:20px}
+.fcopy h2{font-size:clamp(48px,8.4vw,140px);text-transform:uppercase;letter-spacing:-.04em;line-height:.92;text-shadow:0 10px 40px rgba(0,0,0,.4)}
+.fcopy h2 .kid{color:var(--sun);text-transform:none;letter-spacing:-.01em}
+.ln{display:block;overflow:hidden;position:relative;padding-bottom:.04em}
+.ln>span{display:inline-block}
+.js .ln:after{content:"";position:absolute;inset:0 0 .04em;background:var(--sun);transform-origin:right;transform:scaleX(var(--bar,1))}
+
+.fbody{position:relative;z-index:3;margin-top:60vh;background:var(--deep);border-radius:40px 40px 0 0;padding:clamp(70px,9vw,130px) 0 clamp(60px,8vw,110px);box-shadow:0 -40px 80px -20px rgba(0,0,0,.5)}
+.fintro{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.fintro .big{font:700 clamp(24px,2.6vw,38px)/1.28 Mont;letter-spacing:-.015em;color:var(--cream)}
+.fintro .big b{color:var(--sun)}
+.fintro p:not(.big){color:rgba(244,238,226,.75);font-size:17px}
+.counts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(50px,7vw,90px);border-top:1px solid rgba(244,238,226,.18)}
+.counts div{padding:28px 20px 0 0}
+.counts b{display:block;font:800 clamp(44px,5.6vw,86px)/1 Baloo;color:var(--cream);font-variant-numeric:tabular-nums}
+.counts div:nth-child(2) b{color:var(--sun)}.counts div:nth-child(4) b{color:var(--mint)}
+.counts span{display:block;margin-top:8px;color:rgba(244,238,226,.7);font:600 14px/1.4 Mont}
+@media (max-width:900px){.fintro{grid-template-columns:1fr}.counts{grid-template-columns:1fr 1fr;gap:10px 0}.fimg{clip-path:inset(10% 6% 10% 6% round 28px)}}
+
+/* ---------- Nine stages (pinned, horizontal) ---------- */
+.stages{height:520vh;background:linear-gradient(180deg,var(--deep),#0b1d1c);color:var(--cream)}
+.spin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,3vh,36px);padding-top:70px}
+.shead{display:flex;justify-content:space-between;align-items:end;gap:20px;width:100%}
+.shead .eyebrow{color:var(--mint);margin-bottom:12px}
+.shead h2{font-size:clamp(34px,4.4vw,68px);text-transform:uppercase}
+.shead h2 .kid{color:var(--sun);text-transform:none}
+.hud{display:flex;align-items:baseline;gap:8px;padding:14px 22px;border-radius:20px;font:700 12px/1 Mont;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,238,226,.75);background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 0 0 1px rgba(255,255,255,.12)}
+.hud b{font:800 46px/1 Baloo;letter-spacing:0;color:var(--sun);font-variant-numeric:tabular-nums}
+.hud em{font-style:normal;color:var(--cream);margin-left:10px;min-width:120px}
+.strack{display:flex;gap:clamp(16px,2vw,28px);padding:0 var(--pad);width:max-content;will-change:transform}
+.stage{position:relative;flex:0 0 auto;width:clamp(280px,32vw,500px);height:min(54vh,520px);border-radius:28px;overflow:hidden;background:#123}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.stage:hover img{transform:scale(1.05)}
+.stage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,18,17,.9))}
+.stage>div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.stage b{font:800 13px/1 Mont;letter-spacing:.2em;color:var(--sun)}
+.stage h3{font-size:clamp(26px,2.6vw,40px);text-transform:uppercase;margin:8px 0 6px}
+.stage p{font-size:15px;line-height:1.45;color:rgba(255,255,255,.85);max-width:380px}
+.stitch{position:relative;margin:0 var(--pad);height:20px}
+.stitch svg{width:100%;height:20px;display:block;overflow:visible}
+.stitch path{stroke:var(--sun);stroke-width:3;stroke-dasharray:14 10;fill:none;opacity:.9;clip-path:inset(0 calc(100% - var(--p,0%)) 0 0)}
+.stitch:before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:rgba(244,238,226,.15)}
+.stitch i{position:absolute;top:-6px;left:var(--p,0%);width:34px;height:4px;margin-left:-4px;border-radius:4px;background:linear-gradient(90deg,#d8d8d8,#fff);transform:rotate(-24deg);box-shadow:0 0 12px rgba(255,210,90,.6)}
+@media (max-width:700px){.stages{height:600vh}.shead{flex-direction:column;align-items:start}.hud{padding:10px 16px}.hud b{font-size:34px}.stage{width:78vw;height:50vh}}
+
+/* ---------- Founder ---------- */
+.founder{position:relative;min-height:72vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:#071513}
+.founder>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}
+.founder:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,21,19,.85),rgba(7,21,19,.35))}
+.founder .wrap{position:relative;z-index:2;width:100%}
+.founder blockquote{margin:0;max-width:900px}
+.founder blockquote p{font:800 clamp(40px,6.4vw,100px)/1 Mont;text-transform:uppercase;letter-spacing:-.035em}
+.founder blockquote p .kid{display:block;color:var(--sun);text-transform:none;letter-spacing:-.01em}
+.founder blockquote p:before{content:"“";display:block;font:800 120px/.6 Baloo;color:var(--mint);margin-bottom:10px}
+.founder footer{background:none;padding:0;margin-top:26px;font-size:16px;color:rgba(255,255,255,.8)}
+.founder footer b{display:block;color:#fff;font-size:20px}
+
+/* ---------- Certified and responsible ---------- */
+.care{padding:clamp(90px,11vw,160px) 0;background:var(--paper)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(200px,auto);gap:16px}
+.b{position:relative;border-radius:28px;padding:28px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -44px rgba(19,35,32,.5)}
+.b .eyebrow{color:var(--teal-2);margin-bottom:12px}
+.b h3{font-size:clamp(24px,2.2vw,32px);text-transform:uppercase;margin-bottom:10px}
+.b p{color:var(--mute);font-size:15.5px}
+.certs{grid-column:span 2;grid-row:span 2;background:radial-gradient(120% 90% at 0 0,#2f6f67,var(--teal) 50%,var(--deep));color:var(--cream)}
+.certs .eyebrow{color:var(--sun)}
+.certs ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.certs li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.03));box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 0 0 1px rgba(255,255,255,.1);transition:transform .4s var(--ease)}
+.certs li:hover{transform:translateX(6px)}
+.certs li b{font:800 clamp(20px,2vw,28px)/1 Baloo;color:var(--cream)}
+.certs li span{font:600 13px/1.3 Mont;color:rgba(244,238,226,.75);text-align:right}
+.ph{margin:0;padding:0;min-height:260px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.ph:hover img{transform:scale(1.05)}
+.ph figcaption{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;padding:16px 18px;border-radius:20px;color:#fff;font:500 14px/1.45 Mont;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 0 0 1px rgba(255,255,255,.18);text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.ph figcaption b{display:block;font:800 18px/1.2 Mont;margin-bottom:3px}
+.solar{grid-row:span 2}
+.water{background:var(--mint)}.water p{color:#24413b}.water .eyebrow{color:var(--deep)}
+.fibre{background:#f2e6c9}
+.people{grid-column:span 2}
+.care .credit{margin-top:22px;font-size:13px;color:var(--mute)}
+@media (max-width:1000px){.bento{grid-template-columns:1fr 1fr}.certs{grid-column:span 2;grid-row:auto}.solar{grid-row:span 1}}
+@media (max-width:600px){.bento{grid-template-columns:1fr}.certs,.people{grid-column:auto}.certs li{flex-direction:column;align-items:flex-start;gap:6px}.certs li span{text-align:left}}
+
+/* JS reveals (GSAP); without JS everything shows */
+.js .rv{opacity:0;transform:translateY(40px)}
+.nofx .rv{opacity:1!important;transform:none!important}
+.panels{gap:12px}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.js .ln:after{display:none}.js .ln>span{opacity:1}.fimg{clip-path:none}.fimg img{transform:none}.chiprow{transform:none!important}}
+
+.pane[data-i="0"] img{object-position:50% 70%}.pane[data-i="1"] img{object-position:50% 30%}
+
+/* Shoot reels: three phone-shaped clips; a swipe row on phones */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);max-width:980px;margin:8px auto 44px}
+.reel{position:relative;margin:0;aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:#0f2624}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel figcaption{position:absolute;left:12px;bottom:12px;padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;line-height:1;color:#fff;background:rgba(15,38,36,.45);-webkit-backdrop-filter:blur(12px) saturate(1.6);backdrop-filter:blur(12px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 0 0 1px rgba(255,255,255,.18)}
+@media (max-width:700px){
+  .reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;scrollbar-width:none}
+  .reels::-webkit-scrollbar{display:none}
+  .reel{flex:0 0 62%;scroll-snap-align:center}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="lockup" href="index.html"><img src="img/logo.svg" alt="Five Threads Trading LLC, home" width="172" height="50"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#rail">The rail</a>
+      <a href="#factory">Our factory</a>
+      <a href="#range">Range</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="#where">Where we supply</a>
+      <a class="btn btn-sun" href="#book">Book a visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<svg class="threads" id="threads" aria-hidden="true"></svg>
+
+<!-- HERO: made, sold, worn -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hgrid">
+    <div class="hcopy">
+      <p class="eyebrow"><span>Wholesalers and exporters of readymade garments</span><span>Murshid Bazaar, Deira</span></p>
+      <h1 id="h1"><span class="w" style="animation-delay:.15s">Little</span> <span class="w" style="animation-delay:.27s">style,</span>
+        <span class="kid"><span class="w" style="animation-delay:.42s">big</span> <span class="w" style="animation-delay:.56s">dreams.</span></span></h1>
+      <p class="lede">Kids' and men's sweatshirts, T-shirts and polos. Made in our own factory in India, sold wholesale from Murshid Bazaar to stores across the UAE and Bahrain.</p>
+      <div class="ctas">
+        <a class="btn btn-sun" href="#book">Book a showroom visit <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#factory">See our factory</a>
+      </div>
+    </div>
+    <div class="trip" id="trip">
+      <button class="pane" type="button" data-i="0" aria-label="Made: in our own factory">
+        <img src="img/factory/sewing.webp" alt="Sewing line at our factory, AQJ Apparels" fetchpriority="high">
+        <span class="pl"><b>01</b><em>Made</em><small>In our own factory, India</small></span><i class="bar"></i>
+      </button>
+      <button class="pane" type="button" data-i="1" aria-label="Sold: from Murshid Bazaar, Deira">
+        <img src="img/shopfront-night.webp" alt="The Five Threads shop front at night in Murshid Bazaar">
+        <span class="pl"><b>02</b><em>Sold</em><small>Murshid Bazaar, Deira</small></span><i class="bar"></i>
+      </button>
+      <button class="pane on" type="button" data-i="2" aria-label="Worn: by kids and men">
+        <img src="img/mm/hero0039.webp" alt="Two boys in polos and jeans, one riding in a shopping trolley">
+        <span class="pl"><b>03</b><em>Worn</em><small>By kids and men</small></span><i class="bar"></i>
+      </button>
+      <div class="swing" aria-hidden="true">
+        <div class="string"></div>
+        <div class="tag"><small>Design No.</small><b id="tagno">3269B</b><em id="tagsz">1 to 10 years</em></div>
+      </div>
+    </div>
+  </div>
+  <div class="facts wrap">
+    <div><b>19</b>numbered sweatshirt designs</div>
+    <div><b>1–16</b>years across the size ranges</div>
+    <div><b>9 + 1</b>UAE towns and Bahrain supplied</div>
+    <div><b>Since 2014</b>our factory has made garments</div>
+  </div>
+</section>
+
+<!-- Marquee: words and photos from the factory floor -->
+<div class="chips" aria-label="From knitting to packing, in our own factory">
+  <div class="chiprow" id="chiprow"></div>
+</div>
+
+<!-- THE RAIL (signature) -->
+<section class="railsec" id="rail" aria-labelledby="railh">
+  <div class="railpin">
+    <div class="railhead">
+      <div>
+        <p class="eyebrow" style="color:var(--teal-2);margin-bottom:12px">The rail · Kids' sweatshirts</p>
+        <h2 id="railh">Walk the rail. <span class="kid">Tap a tag.</span></h2>
+      </div>
+      <p>This is the rail as buyers see it in Murshid Bazaar. Each hanger is one design number with its size range. Tap any garment to see the full card and add it to your visit.</p>
+      <div class="railcount"><b id="railn">01</b>of 19 designs</div>
+    </div>
+    <div class="rail">
+      <div class="bar"></div>
+      <div class="track" id="track"></div>
+    </div>
+    <div class="raillabel"><span class="prog"><i id="railprog"></i></span><span id="railhint">Scroll to slide the rail</span></div>
+  </div>
+</section>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetno">
+  <button class="close" id="sheetclose" aria-label="Close">×</button>
+  <div class="sheetgrid">
+    <img id="sheetimg" src="img/cards/card02.webp" alt="">
+    <div class="sheetbody">
+      <p class="eyebrow" style="color:var(--teal-2)">Design No.</p>
+      <p class="no" id="sheetno">3269B</p>
+      <p class="size" id="sheetsize">Size 1 to 10 years</p>
+      <ul><li>Soft Cotton</li><li>Comfort Fit</li><li>Durable Quality</li><li>Stylish Everyday</li></ul>
+      <p class="hint">Colours as shown on the card. Ask us for the full colour and size breakdown.</p>
+      <button class="btn btn-teal" id="sheetadd">Add to my visit <span aria-hidden="true">+</span></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- OUR FACTORY -->
+<section class="factory" id="factory" aria-labelledby="facth">
+  <div class="fpin">
+    <div class="fimg" id="fimg"><img src="img/factory/aerial.webp" alt="Aerial view of the AQJ Apparels factory at dusk" loading="lazy"></div>
+    <div class="fshade"></div>
+    <div class="wrap fcopy">
+      <p class="eyebrow">Our factory · AQJ Apparels, Tamil Nadu, India</p>
+      <h2 id="facth"><span class="ln"><span>We don't just</span></span> <span class="ln"><span>sell it.</span></span> <span class="ln kid"><span>We make it.</span></span></h2>
+    </div>
+  </div>
+  <div class="fbody">
+    <div class="wrap">
+      <div class="fintro rv">
+        <p class="big">Behind Five Threads stands our own factory, <b>AQJ Apparels</b>. From yarn to the packed carton, our clothes are knitted, cut, printed, stitched and checked under one roof.</p>
+        <p>AQJ has been crafting garments for children, men and beyond since 2014, for domestic and international brands. That is why a design number you reorder from our shop comes back the same, season after season.</p>
+        <a class="glass glink" href="https://www.aqjapparels.com" target="_blank" rel="noopener"><span>Visit the AQJ Apparels website</span><i aria-hidden="true">↗</i></a>
+      </div>
+      <div class="counts" id="counts">
+        <div><b data-to="2014" data-plain>2014</b><span>Making garments since</span></div>
+        <div><b data-to="1000" data-suf="+">1,000+</b><span>People at our factory</span></div>
+        <div><b data-to="9">9</b><span>Production stages under one roof</span></div>
+        <div><b>GOTS</b><span>Certified organic cotton</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NINE STAGES (pinned, horizontal) -->
+<section class="stages" id="stages" aria-labelledby="stagesh">
+  <div class="spin">
+    <div class="shead wrap">
+      <div>
+        <p class="eyebrow">From yarn to carton</p>
+        <h2 id="stagesh">Nine stages. <span class="kid">One roof.</span></h2>
+      </div>
+      <div class="hud" aria-hidden="true"><span>Stage</span><b id="stn">01</b><span>/ 09</span><em id="stname">Knitting</em></div>
+    </div>
+    <div class="strack" id="strack">
+      <article class="stage"><img src="img/factory/knitting.webp" alt="Circular knitting machine with cones of yarn" loading="lazy"><div><b>01</b><h3>Knitting</h3><p>Circular knitting machines turn cones of yarn into fabric.</p></div></article>
+      <article class="stage"><img src="img/factory/inspection.webp" alt="Fabric inspection machine" loading="lazy"><div><b>02</b><h3>Fabrication</h3><p>Fabric rolls are checked on the inspection machine before cutting.</p></div></article>
+      <article class="stage"><img src="img/factory/testing.webp" alt="Technicians at the fabric testing lab" loading="lazy"><div><b>03</b><h3>Testing</h3><p>Our in-house lab tests the fabric before it goes into production.</p></div></article>
+      <article class="stage"><img src="img/factory/cutting.webp" alt="Automatic cutting table operated from a touch screen" loading="lazy"><div><b>04</b><h3>Cutting</h3><p>Automatic cutting tables cut every pattern piece to size.</p></div></article>
+      <article class="stage"><img src="img/factory/printing.webp" alt="Screen printing carousel" loading="lazy"><div><b>05</b><h3>Printing</h3><p>Screen printing carousels lay down the bold graphics kids pick.</p></div></article>
+      <article class="stage"><img src="img/factory/embroidery.webp" alt="Multi-head embroidery machines with coloured thread cones" loading="lazy"><div><b>06</b><h3>Embroidery</h3><p>Multi-head machines stitch badges, names and patches.</p></div></article>
+      <article class="stage"><img src="img/factory/sewing-floor.webp" alt="Rows of sewing machines on the factory floor" loading="lazy"><div><b>07</b><h3>Sewing</h3><p>Long sewing lines put each garment together, piece by piece.</p></div></article>
+      <article class="stage"><img src="img/factory/ironing.webp" alt="Steam ironing tables" loading="lazy"><div><b>08</b><h3>Ironing</h3><p>Steam irons give every piece a clean, shop-ready finish.</p></div></article>
+      <article class="stage"><img src="img/factory/checking.webp" alt="Garments being checked and folded" loading="lazy"><div><b>09</b><h3>Packaging</h3><p>Checked, passed through the needle detector, folded and packed.</p></div></article>
+    </div>
+    <div class="stitch" aria-hidden="true"><svg viewBox="0 0 1000 20" preserveAspectRatio="none"><path d="M0 10 H1000"/></svg><i id="needle"></i></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" aria-label="A word from our managing director">
+  <img src="img/factory/facade-night.webp" alt="The AQJ Apparels factory, lit at night" loading="lazy">
+  <div class="wrap">
+    <blockquote class="rv">
+      <p>Leading with purpose. <span class="kid">Building with pride.</span></p>
+      <footer><b>Shiraj A Gani</b> Managing Director, AQJ Apparels</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- CERTIFIED AND RESPONSIBLE -->
+<section class="care" id="care" aria-labelledby="careh">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Certified and responsible</p>
+      <h2 id="careh">Made right. <span class="kid">Made with care.</span></h2>
+      <p>Our factory is audited and certified, runs on solar power and recycles its water. These are the standards behind every carton we ship to Deira.</p>
+    </div>
+    <div class="bento">
+      <div class="b certs rv">
+        <p class="eyebrow">Certified</p>
+        <ul>
+          <li><b>GOTS</b><span>Global Organic Textile Standard</span></li>
+          <li><b>OCS 100</b><span>Organic Content Standard</span></li>
+          <li><b>ISO 9001:2015</b><span>Quality management</span></li>
+          <li><b>Sedex SMETA</b><span>Ethical trade audit</span></li>
+          <li><b>Disney FAMA</b><span>Facility and Merchandise Authorization</span></li>
+        </ul>
+      </div>
+      <figure class="b ph solar rv"><img src="img/factory/solar.webp" alt="Solar panels on the factory roof" loading="lazy"><figcaption><b>Solar powered</b>Panels on the factory roof and energy-efficient machines.</figcaption></figure>
+      <div class="b water rv"><p class="eyebrow">Water</p><h3>Recycled and harvested</h3><p>A water recycling plant and rainwater harvesting across the site.</p></div>
+      <div class="b fibre rv"><p class="eyebrow">Materials</p><h3>Better fibres</h3><p>GOTS-certified organic cotton, recycled polyester and low-impact dyes.</p></div>
+      <figure class="b ph people rv"><img src="img/factory/team.webp" alt="Factory team members outdoors, smiling" loading="lazy"><figcaption><b>Our people</b>Skill training, fair employment, flexible hours and safe workplaces, with a focus on women.</figcaption></figure>
+      <figure class="b ph trees rv"><img src="img/factory/trees.webp" alt="Factory team planting trees" loading="lazy"><figcaption><b>Our community</b>Healthcare camps, student programmes and tree planting.</figcaption></figure>
+    </div>
+    <p class="credit">Factory photos and facts: AQJ Apparels.</p>
+  </div>
+</section>
+
+<!-- RANGE -->
+<section class="range" id="range" aria-labelledby="rangeh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">The range</p>
+      <h2 id="rangeh">Three shapes. <span class="kid">Endless prints.</span></h2>
+      <p>Printed and embroidered graphics on sweatshirts, T-shirts and polos, for boys, girls and men. Hover a panel to open it.</p>
+    </div>
+    <div class="panels">
+      <a class="panel" href="catalogue.html#sweatshirts"><img src="img/mm/mm1204.webp" alt="Girl in a black I love NY sweatshirt" loading="lazy"><div class="pc"><span class="num">01</span><h3>Sweatshirts</h3><p>Our numbered collection: 19 designs on the catalogue cards, from 1 to 16 years.</p><span class="go">Open the 19 designs</span></div></a>
+      <a class="panel" href="catalogue.html#tees"><img src="img/mm/mm1822.webp" alt="Boy in a yellow Tigers are awesome T-shirt" loading="lazy"><div class="pc"><span class="num">02</span><h3>T-shirts</h3><p>Graphic tees in bright and washed colours, on the rail in the showroom now.</p><span class="go">See the T-shirts</span></div></a>
+      <a class="panel" href="catalogue.html#polos"><img src="img/mm/mm1789.webp" alt="Teen boy in a green polo shirt" loading="lazy"><div class="pc"><span class="num">03</span><h3>Polos</h3><p>Collared polos in solids, stripes and textured knits.</p><span class="go">See the polos</span></div></a>
+      <a class="panel" href="#book"><img src="img/mm/mm1218.webp" alt="Four girls in sweatshirt and trouser sets" loading="lazy"><div class="pc"><span class="num">04</span><h3>Co-ord sets</h3><p>Matching tops and trousers for girls, sold as one outfit.</p><span class="go">Book a visit to see them</span></div></a>
+      <a class="panel" href="#book"><img src="img/factory/checking.webp" alt="Men's T-shirts being checked and folded at our factory" loading="lazy" style="object-position:40% 50%"><div class="pc"><span class="num">05</span><h3>For men</h3><p>T-shirts, polos and sweatshirts for men, made in the same factory.</p><span class="go">Book a visit to see them</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section class="look" aria-labelledby="lookh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">From the photo shoot</p>
+      <h2 id="lookh">Clothes kids <span class="kid">actually want.</span></h2>
+      <p>Bold prints, easy fits and colours that stand out on a busy shelf. A few clips and frames from our latest shoot.</p>
+    </div>
+  </div>
+  <div class="wrap reels">
+    <figure class="reel glass"><video src="vid/coords.mp4" poster="vid/coords.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Girls modelling co-ord sets"></video><figcaption>Co-ord sets</figcaption></figure>
+    <figure class="reel glass"><video src="vid/tees.mp4" poster="vid/tees.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Teen boy modelling graphic T-shirts"></video><figcaption>Graphic tees</figcaption></figure>
+    <figure class="reel glass"><video src="vid/longsleeve.mp4" poster="vid/longsleeve.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Teen boy modelling long-sleeve tops"></video><figcaption>Long sleeves</figcaption></figure>
+  </div>
+  <div class="strip" id="strip1"></div>
+  <div class="strip rev" id="strip2"></div>
+  <div class="wrap"><p class="credit">Photos and videos: M&amp;M photo shoot. Hover the photos to pause.</p></div>
+</section>
+
+<!-- WHY STORES STOCK US -->
+<section class="why" id="why" aria-labelledby="whyh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Why stores stock us</p>
+      <h2 id="whyh">Our four <span class="kid">promises.</span></h2>
+      <p>These are the words printed on every Five Threads catalogue card. We stand behind each one.</p>
+    </div>
+    <div class="whygrid">
+      <div class="words" id="words">
+        <div class="word on" data-i="0"><h3>Soft <span class="kid">Cotton</span></h3><p>Fabric that feels good on small skin, so parents pick it up and keep it.</p></div>
+        <div class="word" data-i="1"><h3>Comfort <span class="kid">Fit</span></h3><p>Easy shapes for kids who run, climb and sit on the floor.</p></div>
+        <div class="word" data-i="2"><h3>Durable <span class="kid">Quality</span></h3><p>Made to hold up wash after wash, so your customers come back for the next size.</p></div>
+        <div class="word" data-i="3"><h3>Stylish <span class="kid">Everyday</span></h3><p>Cool looks for little stars, made for every day of the week.</p></div>
+      </div>
+      <div class="photostack" id="stack">
+        <img class="on" src="img/mm/mm0470.webp" alt="Close-up of cotton looper fabric" loading="lazy">
+        <img src="img/mm/mm0016.webp" alt="Smiling boy in a black graphic T-shirt" loading="lazy">
+        <img src="img/mm/mm0054.webp" alt="Folded textured knit T-shirts in four colours" loading="lazy">
+        <img src="img/mm/mm1219.webp" alt="Girl in a peach sweatshirt set posing in a red frame" loading="lazy">
+        <span class="badge">Cool Looks for Little Stars</span>
+      </div>
+    </div>
+    <div class="proof reveal">
+      <div><b>One number per style</b><span>Every design has its own number, so a reorder is exactly what sold last time.</span></div>
+      <div><b>1 to 16 years</b><span>Size ranges of 1–10, 3–10, 3–14, 5–16 and 9–16 years across the range.</span></div>
+      <div><b>Kids and men</b><span>Prints and colours for boys and girls from toddler sizes to teens, and a men's line too.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE SUPPLY -->
+<section class="where" id="where" aria-labelledby="whereh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Where we supply</p>
+      <h2 id="whereh">From Deira <span class="kid">to the shelves.</span></h2>
+      <p>Every thread starts at our shop in Murshid Bazaar and runs to stores across the UAE, and on to Bahrain.</p>
+    </div>
+    <div class="mapgrid">
+      <div class="map" id="map">
+        <svg viewBox="0 0 640 470" role="img" aria-labelledby="maptitle">
+          <title id="maptitle">Map of the places Five Threads supplies, with routes from Deira, Dubai</title>
+          <g id="routes"></g>
+          <g id="pins"></g>
+        </svg>
+      </div>
+      <div>
+        <ul class="places">
+          <li>Dubai <span>Home</span></li><li>Sharjah <span>UAE</span></li><li>Ajman <span>UAE</span></li>
+          <li>Umm Al Quwain <span>UAE</span></li><li>Ras Al Khaimah <span>UAE</span></li><li>Fujairah <span>UAE</span></li>
+          <li>Dibba <span>UAE</span></li><li>Khor Fakkan <span>UAE</span></li><li>Al Ain <span>UAE</span></li><li>Bahrain <span>Export</span></li>
+        </ul>
+        <p class="who">We supply <em>hypermarkets</em>, <em>discount centres</em> and <em>local stores</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="how" id="how" aria-labelledby="howh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">How to order</p>
+      <h2 id="howh">Four steps. <span class="kid">No fuss.</span></h2>
+      <p>Buying for one shop or for a chain, it works the same way.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><h3>Pick from the catalogue</h3><p>Note the design numbers you like. Filter by type and by the ages you sell.</p></div>
+      <div class="step"><h3>Book a visit</h3><p>Come to our showroom in Murshid Bazaar, or ask our team to bring samples to your store.</p></div>
+      <div class="step"><h3>Choose sizes and colours</h3><p>See every design on the rail and choose the mix that suits your shelves.</p></div>
+      <div class="step"><h3>Confirm with our team</h3><p>We confirm the order with you directly, design by design.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK A VISIT -->
+<section class="book" id="book" aria-labelledby="bookh">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Book a visit</p>
+      <h2 id="bookh">See the rail <span class="kid">in person.</span></h2>
+      <p>Choose a day and a time of day. We will confirm the exact time with you on WhatsApp.</p>
+    </div>
+    <div class="bookgrid">
+      <div>
+        <form class="planner" id="planner" novalidate>
+          <fieldset>
+            <legend>What kind of visit?</legend>
+            <div class="seg">
+              <label class="opt"><input type="radio" name="kind" value="Showroom visit" checked><span>Visit our showroom<small>Shop No. 3, Murshid Bazaar, Deira</small></span></label>
+              <label class="opt"><input type="radio" name="kind" value="Samples at my store"><span>Bring samples to my store<small>Our team comes to you</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Which day?</legend>
+            <div class="days" id="days"></div>
+          </fieldset>
+          <fieldset>
+            <legend>What time of day?</legend>
+            <div class="times">
+              <label class="opt"><input type="radio" name="when" value="Morning" checked><span>Morning</span></label>
+              <label class="opt"><input type="radio" name="when" value="Afternoon"><span>Afternoon</span></label>
+              <label class="opt"><input type="radio" name="when" value="Evening"><span>Evening</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>About your store</legend>
+            <div class="fields">
+              <label>Your name<input name="name" autocomplete="name" required></label>
+              <label>Store name<input name="store" autocomplete="organization" required></label>
+              <label>Emirate or country<select name="city">
+                <option>Dubai</option><option>Sharjah</option><option>Ajman</option><option>Umm Al Quwain</option><option>Ras Al Khaimah</option><option>Fujairah</option><option>Abu Dhabi</option><option>Al Ain</option><option>Bahrain</option><option>Other</option></select></label>
+              <label>Mobile (for WhatsApp)<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+              <label class="full">Type of store<select name="storetype"><option>Hypermarket</option><option>Discount centre</option><option>Local store</option><option>Other</option></select></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Designs you want to see</legend>
+            <div class="picks" id="picks"></div>
+            <p class="hint" id="pickhint">Tap garments on the rail or in the catalogue to add them here. You can also leave this empty.</p>
+          </fieldset>
+          <button class="btn btn-teal submit" type="submit">Request this visit <span aria-hidden="true">→</span></button>
+          <p class="hint" id="formerr" role="alert" style="margin-top:12px"></p>
+        </form>
+        <div class="ticket" id="ticket" aria-live="polite">
+          <p class="eyebrow" style="color:var(--mint)">Visit request ready</p>
+          <p class="code" id="tcode">FT-0000</p>
+          <dl id="tlist"></dl>
+          <div class="acts">
+            <a class="btn btn-sun" id="twa" target="_blank" rel="noopener">Send it on WhatsApp</a>
+            <button class="btn btn-ghost" id="tics" type="button">Add to my calendar</button>
+            <button class="btn btn-ghost" id="tedit" type="button">Edit</button>
+          </div>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="card"><img src="img/shopfront-night.webp" alt="The Five Threads shop front at night in Murshid Bazaar" loading="lazy" style="aspect-ratio:4/5;object-position:50% 40%"><div><h3>Our showroom</h3><p>Shop No. 3, Murshid Bazaar, Deira, Dubai. Look for the FIVETHREADS sign.</p></div></div>
+        <p class="note">Your request carries a booking code. Show it at the shop, or quote it on WhatsApp, and we will have your designs on the rail.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY: Burj Khalifa to Murshid Bazaar -->
+<section class="journey" id="visit" aria-labelledby="visith">
+  <div class="jpin">
+    <svg class="scene" id="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06121a"/><stop offset=".55" stop-color="#0d2a33"/><stop offset="1" stop-color="#1f4a46"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#25404a"/><stop offset=".5" stop-color="#3d6470"/><stop offset="1" stop-color="#1b323a"/></linearGradient>
+        <linearGradient id="creek" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b5b6a"/><stop offset="1" stop-color="#0e3440"/></linearGradient>
+        <filter id="wave" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence id="turb" type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+        <radialGradient id="glow"><stop offset="0" stop-color="#ffd25a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd25a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1600" height="900" fill="url(#sky)"/>
+      <g id="stars"></g>
+      <g id="world">
+        <!-- far skyline -->
+        <g fill="#0b2128" opacity=".9">
+          <rect x="40" y="610" width="70" height="200"/><rect x="120" y="560" width="54" height="250"/><rect x="186" y="640" width="90" height="170"/>
+          <rect x="300" y="590" width="60" height="220"/><rect x="372" y="530" width="48" height="280"/><rect x="430" y="620" width="80" height="190"/>
+          <rect x="890" y="600" width="64" height="210"/><rect x="964" y="540" width="52" height="270"/><rect x="1026" y="630" width="96" height="180"/>
+          <rect x="1140" y="580" width="58" height="230"/><rect x="1210" y="650" width="110" height="160"/>
+        </g>
+        <!-- Burj Khalifa silhouette (stepped spire) -->
+        <g id="burj">
+          <path d="M700 810 L700 600 L712 600 L712 470 L722 470 L722 360 L731 360 L731 250 L738 250 L738 160 L743 160 L743 70 L746 70 L748 10 L750 70 L753 70 L753 160 L758 160 L758 250 L765 250 L765 360 L774 360 L774 470 L784 470 L784 600 L796 600 L796 810 Z" fill="url(#glass)"/>
+          <g id="burjlights" fill="#ffe7a3"></g>
+          <circle cx="748" cy="14" r="5" fill="#ff8a6b"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        </g>
+        <!-- UAE flag on a pole, waving -->
+        <g id="flag" transform="translate(880 470) scale(.8)">
+          <rect x="-6" y="0" width="6" height="430" fill="#cfc8b8"/>
+          <circle cx="-3" cy="-4" r="7" fill="#e8dfcb"/>
+          <g filter="url(#wave)">
+            <rect x="0" y="6" width="54" height="138" fill="#ce1126"/>
+            <rect x="54" y="6" width="176" height="46" fill="#00732f"/>
+            <rect x="54" y="52" width="176" height="46" fill="#ffffff"/>
+            <rect x="54" y="98" width="176" height="46" fill="#000000"/>
+          </g>
+        </g>
+        <!-- near skyline + ground -->
+        <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c2328"/><stop offset="1" stop-color="#050f12"/></linearGradient><rect x="-400" y="770" width="3200" height="200" fill="url(#ground)"/><g fill="#081a1f"><rect x="520" y="700" width="120" height="72"/><rect x="820" y="712" width="140" height="60"/><rect x="1250" y="690" width="160" height="82"/></g><g id="streetlights" fill="#ffcf7a"></g>
+        <!-- Dubai Creek and Deira, to the right of the frame -->
+        <path d="M1640 900 L1640 772 Q1700 762 1760 772 T1880 772 T2000 772 L2000 900 Z" fill="url(#creek)"/><path d="M1650 790 q55 -10 110 0 t110 0 t110 0" stroke="#4fb3c4" stroke-width="2" fill="none" opacity=".5"/><path d="M1660 820 q55 -10 110 0 t110 0 t110 0" stroke="#4fb3c4" stroke-width="1.5" fill="none" opacity=".35"/>
+        <g fill="#0b2128"><rect x="1990" y="640" width="80" height="170"/><rect x="2080" y="600" width="60" height="210"/><rect x="2150" y="660" width="120" height="150"/><rect x="2290" y="620" width="70" height="190"/><rect x="2370" y="650" width="100" height="160"/></g>
+        <g id="souk"><rect x="2100" y="610" width="270" height="162" rx="4" fill="#132a2e"/><rect x="2116" y="622" width="72" height="54" rx="3" fill="#5a7fae"/><rect x="2199" y="622" width="72" height="54" rx="3" fill="#b9a3d8"/><rect x="2282" y="622" width="72" height="54" rx="3" fill="#7fa7c9"/><rect x="2100" y="684" width="270" height="30" fill="#0a1a1d"/><text x="2235" y="707" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" letter-spacing="2" fill="#ffe2a0" style="filter:drop-shadow(0 0 6px #ffcf7a)">FIVETHREADS</text><rect x="2150" y="720" width="170" height="52" fill="#f6efe0" opacity=".92"/><rect x="2160" y="728" width="40" height="44" fill="#e7c9d8"/><rect x="2270" y="728" width="40" height="44" fill="#cfe3d8"/></g>
+        <path id="route" d="M748 790 C 1000 840, 1300 760, 1620 770 S 1900 740, 2235 772" fill="none" stroke="#ffd25a" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 12"/>
+        <circle id="car" r="10" fill="#ffd25a"/>
+        <g id="drop" transform="translate(2235 772)">
+          <circle r="60" fill="url(#glow)"/>
+          <path d="M0 0 C -22 -30 -30 -46 -30 -60 A30 30 0 1 1 30 -60 C 30 -46 22 -30 0 0 Z" fill="#ff8a6b" stroke="#fff" stroke-width="3"/>
+          <circle cy="-60" r="11" fill="#fff"/>
+        </g>
+        <g class="jlabel" font-family="Mont" font-weight="700" fill="#f4eee2">
+          <text x="690" y="850" font-size="22" text-anchor="middle">Downtown Dubai</text>
+          <text x="1820" y="870" font-size="22" text-anchor="middle" fill="#9fe0c9">Dubai Creek</text>
+          <text x="2235" y="830" font-size="26" text-anchor="middle" fill="#ffd25a">Murshid Bazaar, Deira</text>
+        </g>
+      </g>
+    </svg>
+    <div class="jcopy" id="jcopy">
+      <div class="jstep on" data-s="0"><p class="eyebrow">Visit us</p><h2 id="visith">Dubai is <span class="kid">home.</span></h2><p>Every thread we sell starts here, under the same sky as the tallest tower in the world.</p></div>
+      <div class="jstep" data-s="1"><p class="eyebrow">Find us</p><h2>Cross the Creek <span class="kid">to Deira.</span></h2><p>Old Dubai's trading heart, where wholesale has always lived.</p></div>
+    </div>
+    <div class="jcard" id="jcard">
+      <img src="img/shopfront-night.webp" alt="The Five Threads shop front at night, with photos of children's wear on screens above the sign" loading="lazy">
+      <div>
+        <p class="eyebrow" style="color:var(--mint)">You have arrived</p>
+        <h3>Five Threads Trading LLC</h3>
+        <p>Shop No. 3, Murshid Bazaar<br>Deira, Dubai, UAE</p>
+        <p class="ar" lang="ar">شركة فايف ثريدز للتجارة العامة ذ.م.م</p>
+        <div class="jacts">
+          <a class="btn btn-sun" href="https://www.google.com/maps/search/?api=1&amp;query=25.2716,55.3005" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="#book">Book a visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="jprog" aria-hidden="true"><i id="jbar"></i></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="lockup" href="index.html"><img src="img/logo.svg" alt="Five Threads Trading LLC" width="240" height="70"></a>
+        <p style="margin-top:18px;max-width:320px">Wholesalers and exporters of readymade garments. Kids' and men's sweatshirts, T-shirts and polos, made in our own factory, AQJ Apparels.</p>
+      </div>
+      <div><h4>Shop</h4><p>Shop No. 3, Murshid Bazaar<br>Deira, Dubai, UAE<br>Dubai trade licence no. 1634801</p></div>
+      <div><h4>Explore</h4><p><a href="catalogue.html">Catalogue</a><br><a href="#rail">The rail</a><br><a href="#factory">Our factory</a><br><a href="https://www.aqjapparels.com" target="_blank" rel="noopener">AQJ Apparels website ↗</a><br><a href="#book">Book a visit</a></p></div>
+    </div>
+    <div class="legal"><span>© 2026 Five Threads Trading LLC. Photos: Five Threads showroom, catalogue cards, the M&amp;M photo shoot and AQJ Apparels.</span><span>Website by First Star Web Studio</span></div>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="fx.js"></script>
+</body>
+</html>
