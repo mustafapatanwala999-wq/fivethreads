@@ -245,7 +245,7 @@
       $('#tcode').textContent = code;
       $('#tlist').innerHTML = rows.slice(1).map(([k, v]) => `<dt>${k}</dt><dd></dd>`).join('');
       $$('#tlist dd').forEach((dd, k) => { dd.textContent = rows[k + 1][1]; });
-      const msg = 'FIVE THREADS VISIT REQUEST\n' + rows.map(([k, v]) => k + ': ' + v).join('\n');
+      const msg = 'FIVE THREADS VISIT REQUEST\n(Sent from the website, fivethreads.net)\n\n' + rows.map(([k, v]) => k + ': ' + v).join('\n');
       $('#twa').href = 'https://wa.me/' + (FT.whatsapp || '') + '?text=' + encodeURIComponent(msg);
       planner.style.display = 'none';
       $('#ticket').classList.add('show');

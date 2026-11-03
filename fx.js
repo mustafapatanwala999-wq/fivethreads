@@ -147,7 +147,7 @@
     a.textContent = FT.phone; a.href = 'tel:' + FT.phone.replace(/[^+\d]/g, '');
     document.getElementById('cphone').hidden = false;
   }
-  if (FT.whatsapp && document.getElementById('cwa')) { const w = document.getElementById('cwa'); w.href = 'https://wa.me/' + FT.whatsapp; w.target = '_blank'; w.rel = 'noopener'; w.hidden = false; }
+  if (FT.whatsapp && document.getElementById('cwa')) { const w = document.getElementById('cwa'); w.href = 'https://wa.me/' + FT.whatsapp + '?text=' + encodeURIComponent('Hi Five Threads, I visited your website (fivethreads.net) and would like to know more about your range.'); w.target = '_blank'; w.rel = 'noopener'; w.hidden = false; }
   // Photo strips keep sliding; they pause only after the pointer rests on them for 5 seconds
   const look = document.querySelector('.look'), strips = [...document.querySelectorAll('.look .strip')];
   if (look && strips.length) {

@@ -4,8 +4,8 @@
    their design numbers are not on file yet, so they are listed as "on request". */
 window.FT = {
   // Fill in once Mustafa confirms the number (open question 1). Digits only, with country code.
-  whatsapp: "",   // digits only, with country code, e.g. 9715xxxxxxxx
-  phone: "",      // as it should be shown, e.g. +971 5x xxx xxxx
+  whatsapp: "971543750550",   // digits only, with country code
+  phone: "+971 54 375 0550",   // as shown on the site
   shop: { lat: 25.2716, lng: 55.3005, address: "Shop No. 3, Murshid Bazaar, Deira, Dubai, UAE" },
   designs: [
     { no: "3269A", from: 1, to: 10, tag: "t01", card: "card01", look: "Cute Moments" },
