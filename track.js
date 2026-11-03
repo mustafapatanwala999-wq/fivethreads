@@ -1,7 +1,14 @@
-/* Counts "Book a visit" clicks for the Five Threads dashboard. Sends only which button was used, never form data. */
+/* Site analytics for the Five Threads dashboard: Cloudflare Web Analytics, plus "Book a visit" counts that send only which button was used, never form data. */
 (() => {
   const HIT = 'https://dashboard.fivethreads.net/api/hit';
   const page = /catalogue/.test(location.pathname) ? 'catalogue' : 'home';
+  // Cloudflare Web Analytics, only on the live site (local copies and QA would report from origin null).
+  if (/(^|\.)fivethreads\.net$/.test(location.hostname)) {
+    const b = document.createElement('script');
+    b.defer = true; b.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    b.setAttribute('data-cf-beacon', '{"token": "f0ca4c9f1f2441f691792c20b916652f"}');
+    document.head.appendChild(b);
+  }
   const send = (e, place) => { try { navigator.sendBeacon(HIT, new Blob([JSON.stringify({ e, page, place })], { type: 'text/plain' })); } catch (_) {} };
 
   document.addEventListener('click', ev => {
