@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Five Threads Trading LLC · Kids' and men's wear wholesale, Deira, Dubai</title>
-<meta name="description" content="Five Threads Trading LLC, Murshid Bazaar, Deira: wholesalers of kids' and men's sweatshirts, T-shirts and polos, made in our own factory. Supplying stores across the UAE and Bahrain.">
+<meta name="description" content="Five Threads Trading LLC, Murshid Bazaar, Deira: wholesalers of kids' and men's sweatshirts, T-shirts and polos, made in our own factory. Supplying stores across the Gulf.">
 <meta name="theme-color" content="#1f4a46">
 <style>
 /* Five Threads Trading LLC · site styles
@@ -602,6 +602,36 @@ figure.item .meta b{font-size:20px}
 @media (prefers-reduced-motion:reduce){.burjtop.up,.burjtop.up:not(.go){animation:none;transform:none}.burjtop.go{animation:none}.gfade img{transition:none}}
 footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-right:58px}}
 
+/* Review fixes: footer above the decorative threads, no gap in the bento, panel titles that fit */
+footer{position:relative;z-index:2}
+@media (min-width:1001px){.trees{grid-column:span 2}}
+.panel{container-type:inline-size}
+.panel h3{font-size:clamp(18px,9.5cqi,40px)}
+
+/* Phone: shorter and simpler, same feel */
+@media (max-width:700px){
+  .railsec{height:240vh}
+  .stages{height:280vh}
+  .journey{height:210vh}
+  .water,.fibre,.trees,#strip2{display:none}
+  .look .strip{animation-duration:45s}
+  /* Range panels become one swipe row */
+  .panels{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:4px;scrollbar-width:none}
+  .panels::-webkit-scrollbar{display:none}
+  .panel{flex:0 0 78%;height:420px;scroll-snap-align:center}
+  .panel h3{font-size:28px}
+  /* Why: the four words only, smaller; steps two by two; booking without the duplicate shop card */
+  .photostack{display:none}
+  .word h3{font-size:30px}
+  .steps{grid-template-columns:1fr 1fr;gap:22px 16px}
+  .step{padding-top:66px}
+  .step:before{width:50px;height:50px;font-size:20px}
+  .grid{grid-template-columns:1fr 1fr;gap:22px 12px}
+  .grid figcaption,.grid .meta{font-size:13px}
+  .step p{font-size:14px}
+  .side{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -632,7 +662,7 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
       <p class="eyebrow"><span>Wholesalers and exporters of readymade garments</span><span>Murshid Bazaar, Deira</span></p>
       <h1 id="h1"><span class="w" style="animation-delay:.15s">Little</span> <span class="w" style="animation-delay:.27s">style,</span>
         <span class="kid"><span class="w" style="animation-delay:.42s">big</span> <span class="w" style="animation-delay:.56s">dreams.</span></span></h1>
-      <p class="lede">Kids' and men's sweatshirts, T-shirts and polos. Made in our own factory in India, sold wholesale from Murshid Bazaar to stores across the UAE and Bahrain.</p>
+      <p class="lede">Kids' and men's sweatshirts, T-shirts and polos. Made in our own factory in India, sold wholesale from Murshid Bazaar to stores across the Gulf.</p>
       <div class="ctas">
         <a class="btn btn-sun" href="#book">Book a showroom visit <span aria-hidden="true">→</span></a>
         <a class="btn btn-ghost" href="#factory">See our factory</a>
@@ -656,12 +686,6 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
         <div class="tag"><small>Design No.</small><b id="tagno">3269B</b><em id="tagsz">1 to 10 years</em></div>
       </div>
     </div>
-  </div>
-  <div class="facts wrap">
-    <div><b>19</b>numbered sweatshirt designs</div>
-    <div><b>1–16</b>years across the size ranges</div>
-    <div><b>9 + 1</b>UAE towns and Bahrain supplied</div>
-    <div><b>Since 2014</b>our factory has made garments</div>
   </div>
 </section>
 
@@ -738,12 +762,6 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
         <p>AQJ has been crafting garments for children, men and beyond since 2014, for domestic and international brands. That is why a design number you reorder from our shop comes back the same, season after season.</p>
         <a class="glass glink" href="https://www.aqjapparels.com" target="_blank" rel="noopener"><span>Visit the AQJ Apparels website</span><i aria-hidden="true">↗</i></a>
       </div>
-      <div class="counts" id="counts">
-        <div><b data-to="2014" data-plain>2014</b><span>Making garments since</span></div>
-        <div><b data-to="1000" data-suf="+">1,000+</b><span>People at our factory</span></div>
-        <div><b data-to="9">9</b><span>Production stages under one roof</span></div>
-        <div><b>GOTS</b><span>Certified organic cotton</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -819,10 +837,10 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
     <div class="head reveal">
       <p class="eyebrow">The range</p>
       <h2 id="rangeh">Three shapes. <span class="kid">Endless prints.</span></h2>
-      <p>Printed and embroidered graphics on sweatshirts, T-shirts and polos, for boys, girls and men. Hover a panel to open it.</p>
+      <p>Printed and embroidered graphics on sweatshirts, T-shirts and polos, for boys, girls and men.</p>
     </div>
     <div class="panels">
-      <a class="panel" href="catalogue.html#sweatshirts"><img src="img/mm/mm1204.webp" alt="Girl in a black I love NY sweatshirt" loading="lazy"><div class="pc"><span class="num">01</span><h3>Sweatshirts</h3><p>Our numbered collection: 19 designs on the catalogue cards, from 1 to 16 years.</p><span class="go">Open the 19 designs</span></div></a>
+      <a class="panel" href="catalogue.html#sweatshirts"><img src="img/mm/mm1204.webp" alt="Girl in a black I love NY sweatshirt" loading="lazy"><div class="pc"><span class="num">01</span><h3>Sweatshirts</h3><p>Our numbered collection, each design with its own catalogue card.</p><span class="go">See the sweatshirts</span></div></a>
       <a class="panel" href="catalogue.html#tees"><img src="img/mm/mm1822.webp" alt="Boy in a yellow Tigers are awesome T-shirt" loading="lazy"><div class="pc"><span class="num">02</span><h3>T-shirts</h3><p>Graphic tees in bright and washed colours, on the rail in the showroom now.</p><span class="go">See the T-shirts</span></div></a>
       <a class="panel" href="catalogue.html#polos"><img src="img/mm/mm1789.webp" alt="Teen boy in a green polo shirt" loading="lazy"><div class="pc"><span class="num">03</span><h3>Polos</h3><p>Collared polos in solids, stripes and textured knits.</p><span class="go">See the polos</span></div></a>
       <a class="panel" href="#book"><img src="img/mm/mm1218.webp" alt="Four girls in sweatshirt and trouser sets" loading="lazy"><div class="pc"><span class="num">04</span><h3>Co-ord sets</h3><p>Matching tops and trousers for girls, sold as one outfit.</p><span class="go">Book a visit to see them</span></div></a>
@@ -847,7 +865,7 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
   </div>
   <div class="strip" id="strip1"></div>
   <div class="strip rev" id="strip2"></div>
-  <div class="wrap"><p class="credit">Photos and videos: M&amp;M photo shoot. Hold the pointer on a photo for 5 seconds to pause.</p></div>
+  <div class="wrap"><p class="credit">Photos and videos: M&amp;M photo shoot.</p></div>
 </section>
 
 <!-- WHY STORES STOCK US -->
@@ -875,7 +893,7 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
     </div>
     <div class="proof reveal">
       <div><b>One number per style</b><span>Every design has its own number, so a reorder is exactly what sold last time.</span></div>
-      <div><b>1 to 16 years</b><span>Size ranges of 1–10, 3–10, 3–14, 5–16 and 9–16 years across the range.</span></div>
+      <div><b>Toddler to teen</b><span>Size ranges that cover little ones right up to teenagers.</span></div>
       <div><b>Kids and men</b><span>Prints and colours for boys and girls from toddler sizes to teens, and a men's line too.</span></div>
     </div>
   </div>
@@ -887,21 +905,20 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
     <div class="head reveal">
       <p class="eyebrow">Where we supply</p>
       <h2 id="whereh">From Deira <span class="kid">to the shelves.</span></h2>
-      <p>Every thread starts at our shop in Murshid Bazaar and runs to stores across the UAE, and on to Bahrain.</p>
+      <p>Every thread starts at our shop in Murshid Bazaar and runs to stores across the Gulf.</p>
     </div>
     <div class="mapgrid">
       <div class="map" id="map">
         <svg viewBox="0 0 640 470" role="img" aria-labelledby="maptitle">
-          <title id="maptitle">Map of the places Five Threads supplies, with routes from Deira, Dubai</title>
+          <title id="maptitle">Map of the Gulf countries Five Threads supplies, with routes from Deira, Dubai</title>
           <g id="routes"></g>
           <g id="pins"></g>
         </svg>
       </div>
       <div>
         <ul class="places">
-          <li>Dubai <span>Home</span></li><li>Sharjah <span>UAE</span></li><li>Ajman <span>UAE</span></li>
-          <li>Umm Al Quwain <span>UAE</span></li><li>Ras Al Khaimah <span>UAE</span></li><li>Fujairah <span>UAE</span></li>
-          <li>Dibba <span>UAE</span></li><li>Khor Fakkan <span>UAE</span></li><li>Al Ain <span>UAE</span></li><li>Bahrain <span>Export</span></li>
+          <li>United Arab Emirates <span>Home</span></li><li>Saudi Arabia <span>Gulf</span></li><li>Oman <span>Gulf</span></li>
+          <li>Qatar <span>Gulf</span></li><li>Bahrain <span>Gulf</span></li><li>Kuwait <span>Gulf</span></li>
         </ul>
         <p class="who">We supply <em>hypermarkets</em>, <em>discount centres</em> and <em>local stores</em>.</p>
       </div>
@@ -962,7 +979,7 @@ footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-
               <label>Your name<input name="name" autocomplete="name" required></label>
               <label>Store name<input name="store" autocomplete="organization" required></label>
               <label>Emirate or country<select name="city">
-                <option>Dubai</option><option>Sharjah</option><option>Ajman</option><option>Umm Al Quwain</option><option>Ras Al Khaimah</option><option>Fujairah</option><option>Abu Dhabi</option><option>Al Ain</option><option>Bahrain</option><option>Other</option></select></label>
+                <option>Dubai</option><option>Sharjah</option><option>Ajman</option><option>Umm Al Quwain</option><option>Ras Al Khaimah</option><option>Fujairah</option><option>Abu Dhabi</option><option>Al Ain</option><option>Saudi Arabia</option><option>Oman</option><option>Qatar</option><option>Bahrain</option><option>Kuwait</option><option>Other</option></select></label>
               <label>Mobile (for WhatsApp)<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
               <label class="full">Type of store<select name="storetype"><option>Hypermarket</option><option>Discount centre</option><option>Local store</option><option>Other</option></select></label>
             </div>

@@ -170,18 +170,17 @@
   /* ---------- Map: threads from Deira ---------- */
   const map = $('#map');
   if (map) {
-    const P = (lng, lat) => [(lng - 54.6) / 2 * 520 + 40, (26 - lat) / 2 * 420 + 30];
+    const P = (lng, lat) => [(lng - 45.5) / 13.5 * 560 + 40, (30.5 - lat) / 8 * 400 + 30];
     const home = P(55.30, 25.27);
+    // One pin per Gulf country, routes drawn from our shop in Deira
     const places = [
-      ['Sharjah', 55.41, 25.34, 'r'], ['Ajman', 55.48, 25.40, 'r'], ['Umm Al Quwain', 55.55, 25.56, 'r'],
-      ['Ras Al Khaimah', 55.94, 25.79, 'r'], ['Dibba', 56.27, 25.62, 'r'], ['Khor Fakkan', 56.35, 25.34, 'r'],
-      ['Fujairah', 56.33, 25.13, 'r'], ['Al Ain', 55.74, 24.21, 'r']
-    ].map(([n, lng, lat, s]) => ({ n, xy: P(lng, lat), s }));
-    places.push({ n: 'Bahrain', xy: [44, 70], s: 'r', far: true });
+      ['Saudi Arabia', 46.72, 24.71], ['Kuwait', 47.98, 29.37], ['Bahrain', 50.58, 26.22],
+      ['Qatar', 51.53, 25.29], ['Oman', 58.41, 23.59], ['Abu Dhabi', 54.37, 24.45]
+    ].map(([n, lng, lat]) => ({ n, xy: P(lng, lat) }));
     const cols = ['#ffd25a', '#f6a6c1', '#9fe0c9', '#c7b5f0', '#f4eee2'];
     const NS = 'http://www.w3.org/2000/svg', routes = $('#routes'), pins = $('#pins');
     places.forEach((p, k) => {
-      const [x, y] = p.xy, cx = (home[0] + x) / 2, cy = Math.min(home[1], y) - (p.far ? 90 : 50);
+      const [x, y] = p.xy, cx = (home[0] + x) / 2, cy = Math.min(home[1], y) - 70;
       const path = document.createElementNS(NS, 'path');
       path.setAttribute('d', `M ${home[0]} ${home[1]} Q ${cx} ${cy} ${x} ${y}`);
       path.setAttribute('class', 'route'); path.setAttribute('stroke', cols[k % 5]);
@@ -191,7 +190,7 @@
       if (p.far) { path.style.strokeDasharray = ''; }
       path.style.transitionDelay = (k * .12) + 's';
       const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 6); c.setAttribute('class', 'pin'); pins.appendChild(c);
-      const t = document.createElementNS(NS, 'text'), left = p.n === 'Sharjah';
+      const t = document.createElementNS(NS, 'text'), left = p.n === 'Oman' || p.n === 'Abu Dhabi';
       t.setAttribute('x', left ? x - 12 : x + 12); t.setAttribute('y', left ? y + 18 : y + 5); if (left) t.setAttribute('text-anchor', 'end');
       t.textContent = p.n; pins.appendChild(t);
     });
@@ -306,7 +305,7 @@
       $('#swsec').style.display = (type === 'all' || type === 'sweatshirts') ? '' : 'none';
       const show = FT.showroom.filter(s => type === 'all' || (type === 'tees' && s.type === 'tee') || (type === 'polos' && s.type === 'polo'));
       $('#showsec').style.display = type === 'sweatshirts' ? 'none' : '';
-      $('#showh').textContent = type === 'polos' ? 'Polos on the rail' : type === 'tees' ? 'T-shirts on the rail' : 'T-shirts and polos on the rail';
+      $('#showh').textContent = type === 'polos' ? 'Polos' : type === 'tees' ? 'T-shirts' : 'T-shirts and polos';
       showGrid.innerHTML = '';
       show.forEach((s, k) => {
         const ref = (s.type === 'polo' ? 'P' : 'T') + s.img.replace(/\D/g, ''), key = (s.type === 'polo' ? 'Polo ' : 'T-shirt ') + ref;
@@ -315,7 +314,7 @@
         el.appendChild(selBtn(key, key));
         showGrid.appendChild(el);
       });
-      $('#count').textContent = (sw.length ? sw.length + ' numbered designs' : '') + (sw.length && show.length ? ' · ' : '') + (show.length ? show.length + ' showroom pieces' : '');
+      $('#count').textContent = (sw.length ? sw.length + ' numbered designs' : '') + (sw.length && show.length ? ' · ' : '') + (show.length ? show.length + ' T-shirts and polos' : '');
       bar.classList.toggle('show', picks.length > 0);
       $('#barn').textContent = picks.length + (picks.length === 1 ? ' piece' : ' pieces') + ' selected for your visit';
     }

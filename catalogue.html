@@ -602,6 +602,36 @@ figure.item .meta b{font-size:20px}
 @media (prefers-reduced-motion:reduce){.burjtop.up,.burjtop.up:not(.go){animation:none;transform:none}.burjtop.go{animation:none}.gfade img{transition:none}}
 footer .legal{padding-right:84px}@media (max-width:700px){footer .legal{padding-right:58px}}
 
+/* Review fixes: footer above the decorative threads, no gap in the bento, panel titles that fit */
+footer{position:relative;z-index:2}
+@media (min-width:1001px){.trees{grid-column:span 2}}
+.panel{container-type:inline-size}
+.panel h3{font-size:clamp(18px,9.5cqi,40px)}
+
+/* Phone: shorter and simpler, same feel */
+@media (max-width:700px){
+  .railsec{height:240vh}
+  .stages{height:280vh}
+  .journey{height:210vh}
+  .water,.fibre,.trees,#strip2{display:none}
+  .look .strip{animation-duration:45s}
+  /* Range panels become one swipe row */
+  .panels{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:4px;scrollbar-width:none}
+  .panels::-webkit-scrollbar{display:none}
+  .panel{flex:0 0 78%;height:420px;scroll-snap-align:center}
+  .panel h3{font-size:28px}
+  /* Why: the four words only, smaller; steps two by two; booking without the duplicate shop card */
+  .photostack{display:none}
+  .word h3{font-size:30px}
+  .steps{grid-template-columns:1fr 1fr;gap:22px 16px}
+  .step{padding-top:66px}
+  .step:before{width:50px;height:50px;font-size:20px}
+  .grid{grid-template-columns:1fr 1fr;gap:22px 12px}
+  .grid figcaption,.grid .meta{font-size:13px}
+  .step p{font-size:14px}
+  .side{display:none}
+}
+
 </style>
 </head>
 <body>
