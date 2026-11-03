@@ -45,8 +45,8 @@ p{margin:0}
 .btn-ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(244,238,226,.55)}
 .btn-teal{background:var(--teal);color:var(--cream)}
 .btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--deep);padding:10px 14px;border-radius:8px;z-index:99}
-.skip:focus{left:8px}
+.skip{position:absolute;left:8px;top:8px;transform:translateY(-200%);background:var(--sun);color:var(--deep);padding:10px 14px;border-radius:8px;z-index:99}
+.skip:focus{transform:none}
 
 /* ---------- Header ---------- */
 .top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s}
@@ -722,7 +722,7 @@ footer{position:relative;z-index:2}
       <p>This is the rail as buyers see it in Murshid Bazaar. Each hanger is one design number with its size range. Tap any garment to see the full card and add it to your visit.</p>
       <div class="railcount"><b id="railn">01</b>of 19 designs</div>
     </div>
-    <div class="rail">
+    <div class="rail" data-qa-scroll>
       <div class="bar"></div>
       <div class="track" id="track"></div>
     </div>
@@ -776,7 +776,7 @@ footer{position:relative;z-index:2}
       </div>
       <div class="hud" aria-hidden="true"><span>Stage</span><b id="stn">01</b><span>/ 09</span><em id="stname">Knitting</em></div>
     </div>
-    <div class="strack" id="strack">
+    <div class="strack" id="strack" data-qa-scroll>
       <article class="stage"><img src="img/factory/knitting.webp" alt="Circular knitting machine with cones of yarn" loading="lazy"><div><b>01</b><h3>Knitting</h3><p>Circular knitting machines turn cones of yarn into fabric.</p></div></article>
       <article class="stage"><img src="img/factory/inspection.webp" alt="Fabric inspection machine" loading="lazy"><div><b>02</b><h3>Fabrication</h3><p>Fabric rolls are checked on the inspection machine before cutting.</p></div></article>
       <article class="stage"><img src="img/factory/testing.webp" alt="Technicians at the fabric testing lab" loading="lazy"><div><b>03</b><h3>Testing</h3><p>Our in-house lab tests the fabric before it goes into production.</p></div></article>
@@ -839,7 +839,7 @@ footer{position:relative;z-index:2}
       <h2 id="rangeh">Three shapes. <span class="kid">Endless prints.</span></h2>
       <p>Printed and embroidered graphics on sweatshirts, T-shirts and polos, for boys, girls and men.</p>
     </div>
-    <div class="panels">
+    <div class="panels" data-qa-scroll>
       <a class="panel" href="catalogue.html#sweatshirts"><img src="img/mm/mm1204.webp" alt="Girl in a black I love NY sweatshirt" loading="lazy"><div class="pc"><span class="num">01</span><h3>Sweatshirts</h3><p>Our numbered collection, each design with its own catalogue card.</p><span class="go">See the sweatshirts</span></div></a>
       <a class="panel" href="catalogue.html#tees"><img src="img/mm/mm1822.webp" alt="Boy in a yellow Tigers are awesome T-shirt" loading="lazy"><div class="pc"><span class="num">02</span><h3>T-shirts</h3><p>Graphic tees in bright and washed colours, on the rail in the showroom now.</p><span class="go">See the T-shirts</span></div></a>
       <a class="panel" href="catalogue.html#polos"><img src="img/mm/mm1789.webp" alt="Teen boy in a green polo shirt" loading="lazy"><div class="pc"><span class="num">03</span><h3>Polos</h3><p>Collared polos in solids, stripes and textured knits.</p><span class="go">See the polos</span></div></a>
